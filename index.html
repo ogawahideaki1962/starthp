@@ -1,50 +1,92 @@
-<body>
-<p>この文章の <span style="color: red;">赤い部分</span> だけ色を変えます。</p>
-<p>この文章の <strong>太字部分</strong> です。</p>
-<p>この文章の <em>強調部分</em> です。desu</p>
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <title>トップページサンプル</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+      }
+      header {
+        background-color: #4caf50;
+        color: white;
+        padding: 1em;
+        text-align: center;
+      }
+      nav {
+        background-color: #333;
+        color: white;
+        display: flex;
+        justify-content: center;
+      }
+      nav a {
+        color: white;
+        padding: 1em;
+        text-decoration: none;
+      }
+      nav a:hover {
+        background-color: #575757;
+      }
+      main {
+        display: flex;
+        flex: 1;
+        padding: 1em;
+      }
+      article {
+        flex: 3;
+        padding: 1em;
+      }
+      aside {
+        flex: 1;
+        background-color: #f4f4f4;
+        padding: 1em;
 
-<form action="/submit.php">
+        margin-left: 1em;
+      }
+      footer {
+        background-color: #333;
+        color: white;
+        text-align: center;
+        padding: 1em;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>サイトタイトル</h1>
+      <p>キャッチコピーや説明文</p>
+    </header>
 
-<form action="/submit" method="post">
-  <label for="name">名前:</label>
-  <input type="text" id="name" name="name" required>
-  <br>
-  <label for="email">メールアドレス:</label>
-  <input type="email" id="email" name="email" required>
-  
-  <button type="submit">送信</button>
-</form>
+    <nav>
+      <a href="#">ホーム</a>
+      <a href="#">サービス</a>
+      <a href="#">会社概要</a>
+      <a href="#">お問い合わせ</a>
+    </nav>
 
-<form action="/submit" method="post">
-  <label for="message">お問い合わせ内容:</label><br>
-  <textarea id="message" name="message" rows="6" cols="50" placeholder="ご自由にご記入ください"></textarea>
-  <br>
-  <button type="submit">送信</button>
-</form>
+    <main>
+      <article>
+        <h2>最新情報</h2>
+        <p>ここに記事やコンテンツを配置します。</p>
+        <p>例えばニュースやブログ記事など。</p>
+      </article>
 
-<form action="/submit" method="post">
-  <label for="message2">お問い合わせ内容:</label><br>
-  <textarea id="message2" name="message2" rows="5" cols="30" placeholder="ご自由にご記入ください"></textarea>
-  <br>
-  <button type="submit">送信</button>
-</form>
+      <aside>
+        <h3>サイドメニュー</h3>
+        <ul>
+          <li><a href="#">リンク1</a></li>
+          <li><a href="#">リンク2</a></li>
+          <li><a href="#">リンク3</a></li>
+        </ul>
+      </aside>
+    </main>
 
-<form>  /* チェックボックスの例 */
-  <p>好きなフルーツを選んでください:</p>
-  <label><input type="checkbox" name="fruit" value="apple"> りんご</label>
-  <label><input type="checkbox" name="fruit" value="banana"> バナナ</label>
-  <label><input type="checkbox" name="fruit" value="orange"> オレンジ</label>
-</form>
-
-<form> /* ラジオボタンの例 */
-  <p>性別を選んでください:</p>
-  <label><input type="radio" checked name="gender" value="male"> 男性</label>
-  <label><input type="radio" name="gender" value="female"> 女性</label>
-  <label><input type="radio" name="gender" value="other"> その他</label>
-</form>
-
-<audio controls src="../music/地上の星.mp3">
-  お使いのブラウザはaudioタグに対応していません。
-</audio>
-
-</body>
+    <footer>
+      <p>&copy; 2025 サイト名. All rights reserved.</p>
+    </footer>
+  </body>
+</html>
