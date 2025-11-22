@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <title>classで複数要素を操作</title>
+    <style>
+      /* class指定で複数要素に共通スタイルを適用 */
+      .highlight {
+        background-color: yellow;
+        font-weight: bold;
+      }
+    </style>
+  </head>
+  <body>
+    <p class="highlight">これは強調表示された段落です。</p>
+    <p>これは普通の段落です。</p>
+    <p class="highlight">これも強調表示された段落です。</p>
+    <p>これは普通の段落です。</p>
+    <p class="highlight">これも強調表示された段落です。</p>
+    <button id="toggleBtn">強調を切り替え</button>
+
+    <script>
+      const button = document.getElementById("toggleBtn");
+      const highlights = document.getElementsByClassName("highlight");
+
+      highlights[0].style.backgroundColor = "yellow";
+      highlights[1].style.backgroundColor = "lightblue";
+      highlights[2].style.backgroundColor = "yellow";
+//      highlights.style.backgroundColor = "green";
+      button.addEventListener("click", function () {
+        console.log(highlights);
+        // HTMLCollectionを配列風にループ
+        for (let i = 0; i < highlights.length; i++) {
+          // 背景色を交互に切り替える例
+          if (highlights[i].style.backgroundColor === "yellow") {
+            highlights[i].style.backgroundColor = "lightblue";
+          } else {
+            highlights[i].style.backgroundColor = "yellow";
+          }
+        }
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>複数クラスの組み合わせ</title>
+  <style>
+    /* 基本の強調スタイル */
+    .highlight {
+      background-color: yellow;
+      font-weight: bold;
+    }
+
+    /* エラーメッセージ用スタイル */
+    .error {
+      color: red;
+      border: 1px solid red;
+      padding: 3px;
+    }
+
+    /* highlight と error を両方持つ要素だけ特別に */
+    .highlight.error {
+      background-color: pink;   /* 黄色ではなくピンクに */
+      color: darkred;           /* 文字色も濃い赤に */
+      border: 2px solid darkred;
+    }
+  </style>
+</head>
+<body>
+  <p class="highlight">これは強調表示された段落です。</p>
+  <p class="error">これはエラーメッセージです。</p>
+  <p class="highlight error">これは強調かつエラーの段落です。</p>
+</body>
+</html>

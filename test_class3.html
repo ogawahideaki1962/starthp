@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <title>クラスの動的操作</title>
+    <style>
+      .normal {
+        color: Blue;
+      }
+      .highlight {
+        background-color: yellow;
+        font-weight: bold;
+      }
+      .error {
+        color: red;
+        border: 1px solid red;
+        padding: 3px;
+      }
+    </style>
+  </head>
+  <body>
+    <p class="normal" id="normal_message">常に通常の段落です。</p>  /* 常に normal クラス */
+    <p id="message">これは通常の段落です。</p>  /* 最初はクラスなし */
+    <button id="toggleHighlight">強調切り替え</button>
+    <button id="toggleError">エラー切り替え</button>
+
+    <script>
+      const message = document.getElementById("message");
+      const normal_message = document.getElementById("normal_message");
+      const btnHighlight = document.getElementById("toggleHighlight");
+      const btnError = document.getElementById("toggleError");
+
+      console.log(normal_message.classList); // 初期クラス名（空）
+      console.log(message.classList); // 初期クラス名（空）
+      // 強調クラスを付け外し
+      btnHighlight.addEventListener("click", function () {
+        message.classList.toggle("highlight");  // クラスの付け外し
+        normal_message.classList.toggle("error");  // クラスの付け外し
+      console.log(normal_message.classList); // 初期クラス名（空）
+        console.log(message.classList);     // 変更後のクラス名
+      });
+
+      // エラークラスを付け外し
+      btnError.addEventListener("click", function () {
+        message.classList.toggle("error");
+        normal_message.classList.toggle("error");  // クラスの付け外し
+        console.log(message.classList); // 初期クラス名（空）
+      });
+    </script>
+  </body>
+</html>
