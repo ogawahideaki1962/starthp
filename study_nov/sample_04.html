@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>getElementByIdとquerySelectorの併用例</title>
+  <style>
+    .highlight {
+      background-color: yellow;
+      font-weight: bold;
+    }
+    .done {
+      text-decoration: line-through;
+      color: gray;
+    }
+  </style>
+</head>
+<body>
+  <h1 id="pageTitle">買い物リスト</h1>
+  <ul>
+    <li class="item">りんご</li>
+    <li class="item">みかん</li>
+    <li class="item">ぶどう</li>
+    <li class="item">なし</li>
+    <li class="item">すいか</li>
+  </ul>
+  <button id="changeTitleBtn">タイトル変更</button>
+  <button id="highlightBtn">全部強調</button>
+  <button id="doneBtn">偶数番目を完了</button>
+
+  <script src="script.js"></script>
+
+    <!-------------------------------------------------->
+    <h2>ソースファイルの表示</h2>
+    <pre id="output"></pre>
+    <script>
+      // 外部の sample.html を読み込む
+      fetch("sample_02.html")
+        .then((response) => response.text())
+        .then((data) => {
+          // そのままテキストとして表示（タグは解釈されない）
+          document.getElementById("output").textContent = data;
+        })
+        .catch((error) => {
+          console.error("読み込みエラー:", error);
+        });
+    </script>
+    <!-------------------------------------------------->
+
+</body>
+
+
+</html>
