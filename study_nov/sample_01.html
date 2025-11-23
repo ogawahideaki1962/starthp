@@ -2,6 +2,9 @@
 <html lang="ja">
   <title>イベントバブリングの例</title>
   <body>
+    <h2 id="showTitle"></h2>
+    <script>document.getElementById("showTitle").textContent = document.title;</script>
+
     <div id="parent" style="padding: 20px; border: 1px solid black">
       親要素
       <button id="child">子要素ボタン</button>
