@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="ja">
+<body>
+  <div id="parent" style="padding:20px; border:1px solid black;">
+    親要素
+    <button id="child">子要素ボタン</button>
+  </div>
+
+  <script>
+    document.getElementById("parent").addEventListener("click", () => {
+      alert("親がクリックされました");
+    });
+
+    document.getElementById("child").addEventListener("click", () => {
+      alert("子がクリックされました");
+    });
+  </script>
+</body>
+</html>
