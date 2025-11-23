@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <title>DOMの操作（要素の追加・削除・変更）</title>
+  </head>
+  <body>
+    <ul id="list">
+      <li>りんご</li>
+    </ul>
+    <button id="addBtn">追加</button>
+    <button id="removeBtn">削除</button>
+
+    <script>
+      const list = document.getElementById("list");
+
+      document.getElementById("addBtn").addEventListener("click", () => {
+        const newItem = document.createElement("li");
+        newItem.textContent = "みかん";
+        list.appendChild(newItem);
+      });
+
+      document.getElementById("removeBtn").addEventListener("click", () => {
+        if (list.lastChild) {
+          list.removeChild(list.lastChild);
+        }
+      });
+    </script>
+  </body>
+</html>
