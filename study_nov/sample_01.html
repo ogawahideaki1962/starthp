@@ -1,19 +1,36 @@
 <!DOCTYPE html>
 <html lang="ja">
-<body>
-  <div id="parent" style="padding:20px; border:1px solid black;">
-    親要素
-    <button id="child">子要素ボタン</button>
-  </div>
+  <body>
+    <div id="parent" style="padding: 20px; border: 1px solid black">
+      親要素
+      <button id="child">子要素ボタン</button>
+    </div>
 
-  <script>
-    document.getElementById("parent").addEventListener("click", () => {
-      alert("親がクリックされました");
-    });
+    <script>    // イベントバブリングの例
+      document.getElementById("parent").addEventListener("click", () => {
+        alert("親がクリックされました");
+      });
 
-    document.getElementById("child").addEventListener("click", () => {
-      alert("子がクリックされました");
-    });
-  </script>
-</body>
+      document.getElementById("child").addEventListener("click", () => {
+        alert("子がクリックされました");
+      });
+    </script>
+
+    <!-------------------------------------------------->
+    <h2>ソースファイルの表示</h2>
+    <pre id="output"></pre>
+    <script>
+      // 外部の sample.html を読み込む
+      fetch("sample_01.html")
+        .then((response) => response.text())
+        .then((data) => {
+          // そのままテキストとして表示（タグは解釈されない）
+          document.getElementById("output").textContent = data;
+        })
+        .catch((error) => {
+          console.error("読み込みエラー:", error);
+        });
+    </script>
+    <!-------------------------------------------------->
+  </body>
 </html>
