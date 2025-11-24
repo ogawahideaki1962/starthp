@@ -75,3 +75,12 @@ a {
 	color: #037d77;
 /*	font-weight: bold;*/
 }
+;#file-content {
+  white-space: pre-wrap;
+  background-color: #f8f8f8;
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin: 10px;
+  font-family: Consolas, "Courier New", Courier, monospace;
+  font-size: 90%;
+}

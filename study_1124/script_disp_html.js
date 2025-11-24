@@ -1,9 +1,5 @@
 function writeSource(filename) {
-  console.log(filename);
-  const newMsg = document.createElement("p");
-  newMsg.textContent = filename;
-  document.body.appendChild(newMsg);
-
+  console.log("読み込み開始:", filename); 
   // 外部の sample.html を読み込む
   fetch(filename)
     .then((response) => response.text())
