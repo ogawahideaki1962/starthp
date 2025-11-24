@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <title>クリック検出＋処理＋アニメーション</title>
+    <style>
+      .menu {
+        width: 200px;
+        height: 100%;
+        background: lightgray;
+        position: fixed;
+        top: 0;
+        right: -200px; /* 初期状態は隠す */
+        transition: left 0.3s ease; /* アニメーション */
+      }
+      .menu.show {
+        right: 0; /* 表示状態 */
+      }
+      .box {
+        opacity: 1;
+        transition: opacity 0.5s ease;
+      }
+      .hidden {
+        opacity: 0;
+        pointer-events: none; /* 非表示時にクリックできないようにする */
+      }
+    </style>
+    <script></script>
+  </head>
+
+  <body>
+    <h2 id="showTitle"></h2>
+    <script>
+      document.getElementById("showTitle").textContent = document.title;
+    </script>
+
+    <p>1. スライド表示（メニューやパネルを横から出す</p>
+    <button id="menuBtn">メニュー</button>
+    <div id="menu" class="menu">メニュー内容</div>
+
+    <script>
+      document.getElementById("menuBtn").addEventListener("click", function () {
+        document.getElementById("menu").classList.toggle("show");
+      });
+    </script>
+
+    <p>2. フェードイン／フェードアウト</p>
+    <button id="fadeBtn">表示切替</button>
+    <div id="box" class="box hidden">フェード表示される要素</div>
+
+    <script>
+      document.getElementById("fadeBtn").addEventListener("click", function () {
+        document.getElementById("box").classList.toggle("hidden");
+      });
+    </script>
+
+    <!-------------------------------------------------->
+    <h2>ソースファイルの表示</h2>
+    <pre id="output"></pre>
+    <script>
+      // 外部の sample.html を読み込む
+      fetch("sample_10.html")
+        .then((response) => response.text())
+        .then((data) => {
+          // そのままテキストとして表示（タグは解釈されない）
+          document.getElementById("output").textContent = data;
+        })
+        .catch((error) => {
+          console.error("読み込みエラー:", error);
+        });
+    </script>
+    <!-------------------------------------------------->
+  </body>
+</html>

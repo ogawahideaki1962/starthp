@@ -57,8 +57,8 @@
   </head>
   <body>
     <header>
-      <h1>サイトタイトル</h1>
-      <p>キャッチコピーや説明文</p>
+    <h2 id="showTitle"></h2>
+    <script>document.getElementById("showTitle").textContent = document.title;</script>
     </header>
 
     <nav>
@@ -72,10 +72,9 @@
       <article>
         <h2>メインメニュー</h2>
         <ul>
-          <li><a href="test_map.html">"sample_01.html"</a></li>
-          <li><a href="test_form.html">"sample_02.html"</a></li>
-          <li><a href="test_class.html">"sample_03.html"</a></li>
-          <li><a href="sample_04.html">"sample_04.html"</a></li>
+          <li><a href="test_map.html">地図の表示</a></li>
+          <li><a href="test_form.html">入力履歴（最新が上）</a></li>
+          <li><a href="test_class.html">classで複数要素を操作</a></li>
         </ul>
       </article>
 

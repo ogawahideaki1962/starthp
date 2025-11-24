@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <title>スライダーとrgb関数で色を操作</title>
+    <style>
+      body {font-size: 14pt; font-weight: plain;}
+      h1 {color: white;padding: 5px;font-size: 24pt; background-color: red;}
+    </style>
+    <script>
+      function clickNow() {
+        var r = document.querySelector('#red').value;
+        var g = document.querySelector('#green').value;
+        var b = document.querySelector('#blue').value;
+        var msg = document.querySelector('#msg');
+        var backgroundColor = document.querySelector('#backgroundColor');
+        msg.style.backgroundColor = 'rgb(' + r + ',' + g + ',' + b + ')';
+        backgroundColor.textContent = msg.style.backgroundColor;
+      }
+    </script>
+  </head>
+
+  <body>
+    <h2 id="showTitle"></h2>
+    <script>
+      document.getElementById("showTitle").textContent = document.title;
+    </script>
+    <p id="msg">色を変更してみよう</p>
+    <p id="backgroundColor"></p>
+    <p onclick="clickNow();">
+      <input type="range" id="red" max="255"> <br>
+      <input type="range" id="green" max="255"> <br>
+      <input type="range" id="blue" max="255"> <br>
+    </p>
+    <button onclick="clickNow();">Click</button>
+
+    <!-------------------------------------------------->
+    <h2>ソースファイルの表示</h2>
+    <pre id="output"></pre>
+    <script>
+      // 外部の sample.html を読み込む
+      fetch("sample_05.html")
+        .then((response) => response.text())
+        .then((data) => {
+          // そのままテキストとして表示（タグは解釈されない）
+          document.getElementById("output").textContent = data;
+        })
+        .catch((error) => {
+          console.error("読み込みエラー:", error);
+        });
+    </script>
+    <!-------------------------------------------------->
+  </body>
+</html>
