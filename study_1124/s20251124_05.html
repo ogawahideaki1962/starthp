@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <title>タッチパネル対応</title>
+    <style>
+      .menu {
+        width: 200px;
+        height: 100%;
+        background: lightgray;
+        position: fixed;
+        top: 0;
+        right: -200px; /* 初期状態は隠す */
+        transition: left 0.3s ease; /* アニメーション */
+      }
+      .menu.show {
+        right: 0; /* 表示状態 */
+      }
+      .box {
+        opacity: 1;
+        transition: opacity 0.5s ease;
+      }
+      .hidden {
+        opacity: 0;
+        pointer-events: none; /* 非表示時にクリックできないようにする */
+      }
+    </style>
+    <script></script>
+  </head>
+
+  <body>
+    <h2 id="showTitle"></h2>
+    <script>
+      document.getElementById("showTitle").textContent = document.title;
+    </script>
+
+    <p>A. touchend を使う場合</p>
+    <button id="btn1">タッチしてね</button>
+    <script>
+      document.getElementById("btn1").addEventListener("touchend", function () {
+        alert("タッチされました！");
+      });
+    </script>
+
+    <p>B. pointerup を使う場合（より汎用的）</p>
+    <button id="btn2">タッチ/クリックしてね</button>
+    <script>
+      document.getElementById("btn2").addEventListener("pointerup", function () {
+        alert("操作されました！");
+      });
+    </script>
+
+    <!-------------------------------------------------->
+    <h2>ソースファイルの表示</h2>
+    <pre id="output"></pre>
+    <script>
+      // 外部の sample.html を読み込む
+      fetch("sample_10.html")
+        .then((response) => response.text())
+        .then((data) => {
+          // そのままテキストとして表示（タグは解釈されない）
+          document.getElementById("output").textContent = data;
+        })
+        .catch((error) => {
+          console.error("読み込みエラー:", error);
+        });
+    </script>
+    <!-------------------------------------------------->
+  </body>
+</html>
