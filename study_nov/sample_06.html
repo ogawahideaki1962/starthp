@@ -29,24 +29,25 @@
       var count = 0;
 
       function doDown(event) {
-        switch (event.buttons) {
+        console.log(event);
+        switch (event.buttons) { // 押されたボタンの判定
           case 1:
             var w = event.clientX;
             var h = event.clientY;
-            var obj = document.createElement('p');
+            var obj = document.createElement('p'); // エレメントの作成
             obj.name = 'create element';
             obj.className = 'newelement';
             obj.textContent = "No. " + count++;
-            event.target.appendChild(obj);
+            event.target.appendChild(obj); // エレメントの追加
             break;
           case 3:
-            if (event.target.name == "create element") {
-              var parent = event.target.parentElement;
-              parent.removeChild(event.target);
+            if (event.target.name == "create element") { // 追加したエレメントなら
+              var parent = event.target.parentElement; // 親エレメントの取得
+              parent.removeChild(event.target); // エレメントの削除
             }
             break;
         }
-        event.preventDefault();
+        event.preventDefault(); // デフォルトの動作をキャンセル
       }
     </script>
   </head>

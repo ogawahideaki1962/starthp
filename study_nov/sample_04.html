@@ -1,36 +1,64 @@
 <!DOCTYPE html>
 <html lang="ja">
-<head>
-  <meta charset="UTF-8">
-  <title>getElementByIdとquerySelectorの併用例</title>
-  <style>
-    .highlight {
-      background-color: yellow;
-      font-weight: bold;
-    }
-    .done {
-      text-decoration: line-through;
-      color: gray;
-    }
-  </style>
-</head>
-<body>
-  <h2 id="showTitle"></h2>
-  <script>document.getElementById("showTitle").textContent = document.title;</script>
+  <head>
+    <meta charset="UTF-8" />
+    <title>getElementByIdとquerySelectorの併用例</title>
+    <style>
+      .highlight {
+        background-color: yellow;
+        font-weight: bold;
+      }
+      .done {
+        text-decoration: line-through;
+        color: gray;
+      }
+    </style>
+  </head>
+  <body>
+    <h2 id="showTitle"></h2>
+    <script>
+      document.getElementById("showTitle").textContent = document.title;
+    </script>
 
-  <h1 id="pageTitle">買い物リスト</h1>
-  <ul>
-    <li class="item">りんご</li>
-    <li class="item">みかん</li>
-    <li class="item">ぶどう</li>
-    <li class="item">なし</li>
-    <li class="item">すいか</li>
-  </ul>
-  <button id="changeTitleBtn">タイトル変更</button>
-  <button id="highlightBtn">全部強調</button>
-  <button id="doneBtn">偶数番目を完了</button>
+    <h1 id="pageTitle">買い物リスト</h1>
+    <ul>
+      <li class="item">りんご</li>
+      <li class="item">みかん</li>
+      <li class="item">ぶどう</li>
+      <li class="item">なし</li>
+      <li class="item">すいか</li>
+    </ul>
+    <button id="changeTitleBtn">タイトル変更</button>
+    <button id="highlightBtn">全部強調</button>
+    <button id="doneBtn">偶数番目を完了</button>
 
-  <script src="script.js"></script>
+    <script>
+      // getElementByIdで一意の要素を取得
+      const titleButton = document.getElementById("changeTitleBtn");
+      titleButton.addEventListener("click", () => { 
+        const title = document.getElementById("pageTitle");
+        title.textContent = "Shopping List";
+      });
+
+      // querySelectorで最初の要素を取得
+      const highlightButton = document.querySelector("#highlightBtn");
+      highlightButton.addEventListener("click", () => {
+        const firstItem = document.querySelector(".item");
+        firstItem.classList.add("highlight");
+      });
+
+      // querySelectorAllで複数要素を取得
+      const doneButton = document.querySelector("#doneBtn");
+      doneButton.addEventListener("click", () => {
+        const items = document.querySelectorAll(".item");
+        items.forEach((item, index) => {
+          if ((index + 1) % 2 === 1) {
+            // 偶数番目だけ
+            item.classList.add("done");
+          }
+        });
+      });
+    </script>
 
     <!-------------------------------------------------->
     <h2>ソースファイルの表示</h2>
@@ -48,8 +76,5 @@
         });
     </script>
     <!-------------------------------------------------->
-
-</body>
-
-
+  </body>
 </html>

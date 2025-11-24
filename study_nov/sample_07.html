@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <title>クリック検出まとめ</title>
+    <style>
+      body {
+        font-size: 14pt;
+        font-weight: plain;
+      }
+    </style>
+    <script></script>
+  </head>
+
+  <body>
+    <h1 id="title">クリック検出まとめ!</h1>
+
+    <p>1. HTMLタグに直接書く（インラインイベントハンドラ）</p>
+    <button onclick="alert('クリックされました')">クリック1</button>
+    
+    <p>2. DOM要素のプロパティに代入</p>
+    <button id="btn">クリック2</button>
+    <script>
+      document.getElementById("btn").onclick = function () {
+        alert("クリックされました");
+      };
+    </script>
+
+    <p>3. addEventListenerを使う（推奨）</p>
+    <button id="btn">クリック</button>
+    <script>
+      document.getElementById("btn").addEventListener("click", function () {
+        alert("クリックされました");
+      });
+    </script>
+
+    <p>4. イベント委譲（親要素でまとめて検出）</p>
+    <div id="container">
+      <button>ボタン1</button>
+      <button>ボタン2</button>
+    </div>
+    <script>
+      document
+        .getElementById("container")
+        .addEventListener("click", function (e) {
+          if (e.target.tagName === "BUTTON") {
+            alert(e.target.textContent + " がクリックされました");
+          }
+        });
+    </script>
+
+    <p>5. ライブラリを使う（例: jQuery）</p>
+    <button id="btn">クリック</button>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+      $("#btn").on("click", function () {
+        alert("クリックされました");
+      });
+    </script>
+
+    <!-------------------------------------------------->
+    <h2>ソースファイルの表示</h2>
+    <pre id="output"></pre>
+    <script>
+      // 外部の sample.html を読み込む
+      fetch("sample_07.html")
+        .then((response) => response.text())
+        .then((data) => {
+          // そのままテキストとして表示（タグは解釈されない）
+          document.getElementById("output").textContent = data;
+        })
+        .catch((error) => {
+          console.error("読み込みエラー:", error);
+        });
+    </script>
+    <!-------------------------------------------------->
+  </body>
+</html>

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <title>クリック後の処理まとめ</title>
+    <style>
+      body {
+        font-size: 14pt;
+        font-weight: plain;
+      }
+    </style>
+    <script></script>
+  </head>
+
+  <body>
+    <h1 id="title">クリック後の処理まとめ!</h1>
+
+    <p>1. classを切り替える（toggle）</p>
+    <button id="btn1">切り替え</button>
+    <div id="box1">BOX</div>
+
+    <script>
+      document.getElementById("btn1").addEventListener("click", function () {
+        document.getElementById("box1").classList.toggle("active");
+      });
+    </script>
+
+    <style>
+      #box {width: 100px;height: 100px;background: gray;}
+      .active {background: tomato;}
+    </style>
+
+    <p>2. テキストや内容を変更</p>
+    <button id="btn2">クリック</button>
+    <p id="msg2">まだクリックされていません</p>
+
+    <script>
+      document.getElementById("btn2").addEventListener("click", function() {
+      document.getElementById("msg2").textContent = "クリックされました！";
+    });
+    </script>
+
+    <p>3. 要素を追加・削除</p>
+    <button id="add3">追加</button>
+    <button id="remove3">削除</button>
+    <ul id="list3"></ul>
+
+    <script>
+      document.getElementById("add3").addEventListener("click", function() {
+      let li = document.createElement("li");
+      li.textContent = "新しい項目";
+      document.getElementById("list3").appendChild(li);
+      });
+
+      document.getElementById("remove3").addEventListener("click", function() {
+        let list = document.getElementById("list3");
+        if (list.lastChild) list.removeChild(list.lastChild);
+      });
+    </script>
+
+    <p>4. スタイルを直接変更</p>
+    <button id="btn4">色変更</button>
+    <div id="box4">BOX</div>
+
+    <script>
+      document.getElementById("btn4").addEventListener("click", function() {
+        document.getElementById("box4").style.backgroundColor = "skyblue";
+      });
+    </script>
+
+    <p>5. 別ページへ移動</p>
+    <button id="btn5">移動</button>
+
+    <script>
+      document.getElementById("btn5").addEventListener("click", function() {
+        window.location.href = "https://ogawahideaki1962.github.io/starthp/";
+      });
+    </script>
+
+    <!-------------------------------------------------->
+    <h2>ソースファイルの表示</h2>
+    <pre id="output"></pre>
+    <script>
+      // 外部の sample.html を読み込む
+      fetch("sample_10.html")
+        .then((response) => response.text())
+        .then((data) => {
+          // そのままテキストとして表示（タグは解釈されない）
+          document.getElementById("output").textContent = data;
+        })
+        .catch((error) => {
+          console.error("読み込みエラー:", error);
+        });
+    </script>
+    <!-------------------------------------------------->
+  </body>
+</html>
