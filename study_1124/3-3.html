@@ -3,7 +3,8 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <title>Herb Kitchen</title>
-<link href="css/base1-5.css" rel="stylesheet" type="text/css">
+<link href="css/base.css" rel="stylesheet" type="text/css">
+<link href="css/3-3.css" rel="stylesheet" type="text/css">
 </head>
 
 <body>
@@ -20,20 +21,50 @@
       <li><a href="#">Column</a></li>
     </ul>
   </div>
-  <div class="section">
+<div class="section">
+  <div class="main">
     <h2>オリジナルレシピ</h2>
     <p>ハーブを使ったカンタンで美味しいオリジナル料理のレシピをご紹介します。ハーブを使ったカンタンで美味しいオリジナル料理のレシピをご紹介します。</p>
     <div class="article">
       <h3>タコのカルパッチョ</h3>
       <p><img src="images/salad.jpg" alt="タコのカルパッチョの画像">ハーブは西洋料理で使われるものばかりではありません。葱やショウガ、ミョウガなど和食でおなじみの薬味も立派なハーブです。ハーブは西洋料理で使われるものばかりではありません。ハーブは西洋料理で使われるものばかりではありません。<br>
         葱やショウガ、ミョウガなど和食でおなじみの薬味も立派なハーブです。ハーブは西洋料理で使われるものばかりではありません。葱やショウガ、ミョウガなど和食でおなじみの薬味も立派なハーブです。ハーブは西洋料理で使われるものばかりではありません。</p>
-    </div>
+      </div>
     <div class="article">
       <h3>しらすのペペロンチーノ</h3>
       <p><img src="images/pasta.jpg" alt="しらすのペペロンチーノの画像">ハーブは西洋料理で使われるものばかりではありません。葱やショウガ、ミョウガなど和食でおなじみの薬味も立派なハーブです。ハーブは西洋料理で使われるものばかりではありません。葱やショウガ、ミョウガなど和食でおなじみの薬味も立派なハーブです。<br>
         葱やショウガ、ミョウガなど和食でおなじみの薬味も立派なハーブです。ハーブは西洋料理で使われるものばかりではありません。葱やショウガ、ミョウガなど和食でおなじみの薬味も立派なハーブです。 </p>
+      </div>
     </div>
+</div>
+  
+  <div class="aside">
+  <h2>最新記事</h2>
+    <ul>
+      <li><a href="#">バジルに虫がついたら</a></li>
+      <li><a href="#">風邪に効くハーブ</a></li>
+      <li><a href="#">ハーブフェア開催!</a></li>
+      <li><a href="#">ローズヒップティー</a></li>
+      </ul>
+    <h2>人気レシピ</h2>
+    <ul>
+      <li><a href="#">しらすのペペロンチーノ</a></li>
+      <li><a href="#">ハーブピザ</a></li>
+      <li><a href="#">夏野菜のジェノベーゼ</a></li>
+      <li><a href="#">タコのカルパッチョ</a></li>
+      <li><a href="#">エスニックサラダ</a></li>
+      </ul>
+    <h2>人気商品</h2>
+    <ul>
+      <li><a href="#">イタリアンハーブmix</a></li>
+      <li><a href="#">オーガニックミント</a></li>
+      <li><a href="#">電動グラインダー</a></li>
+      <li><a href="#">フレッシュハーブセット</a></li>
+      <li><a href="#">エスニックmix</a></li>
+      </ul>
+    <div class="ad"><a href="#"><img src="images/ad1.jpg"  alt=""></a></div>  </div>
   </div>
+
   <div class="footer">
     <address>
     Copy Right <a href="#">Herb Kitchen</a> Co.,Ltd. Since 2004
@@ -45,8 +76,7 @@
     <h2>CSSファイルの表示</h2>
     <pre id="output"></pre>
     <script>
-      // 外部の sample.html を読み込む
-      fetch("css/base1-5.css")
+      fetch("css/base.css")
         .then((response) => response.text())
         .then((data) => {
           // そのままテキストとして表示（タグは解釈されない）
@@ -55,8 +85,18 @@
         .catch((error) => {
           console.error("読み込みエラー:", error);
         });
+      fetch("css/3-3.css")
+        .then((response) => response.text())
+        .then((data) => {
+          // そのままテキストとして表示（タグは解釈されない）
+          document.getElementById("output").textContent += data;
+        })
+        .catch((error) => {
+          console.error("読み込みエラー:", error);
+        });
     </script>
     <!-------------------------------------------------->
+
 
 </body>
 </html>

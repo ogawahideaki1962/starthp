@@ -1,8 +1,8 @@
 @charset "utf-8";
 /*ページの基本デザイン*/
 body {
-	margin:0;
-	padding:0;
+	margin: 0;
+	padding: 0;
 	font-family: "メイリオ", Meiryo, "ＭＳ Ｐゴシック", Osaka, sans-serif;
 	color: #666;
 }
@@ -10,13 +10,93 @@ h1 {
 	margin: 0;
 	font-family: Arial, Helvetica, sans-serif;
 	font-size: 48px;
-	font-weight:normal;
+	font-weight: normal;
 }
 h2 {
 	margin: 0;
 	font-size: 110%;
 }
 h3 {
-	margin:0;
+	margin: 0;
 	font-size: 90%;
+}
+p {
+	margin: 0;
+	font-size: 90%;
+	line-height: 1.6;
+}
+address {
+	font-style: normal;
+	text-align: center;
+	font-size: 90%;
+}
+a {
+	color: #01b2a8;
+	text-decoration: none;
+}
+.article p img {
+	background-color: #fff;
+	padding: 5px;
+	border: 1px solid #ccc;
+	float: left;
+	margin-right: 5px;
+}
+.article {
+	padding: 5px;
+	border: solid 1px #ccc;
+	margin: 10px;
+	min-height: 150px;
+	zoom: 1;
+}
+.article:after {
+	content: ".";
+	display: block;
+	height: 0;
+	clear: both;
+	visibility: hidden;
+}
+.nav ul {
+	font-family: Arial, Helvetica, sans-serif;
+	letter-spacing: 2px;
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+	text-align: right;
+}
+.nav ul li {
+	display: inline-block;
+	padding: 0 5px;
+	border-left: 1px solid #037d77;
+}
+.nav ul li:first-child {
+	border-left: none;
+}
+.nav ul li#now a {
+	color: #037d77;
+	font-weight: bold;
+}
+
+
+.aside h2 {
+	font-size: 90%;
+	margin-top:5px;
+}
+.aside ul {
+	list-style-type:none;
+	font-size:90%;
+	margin:0;
+	padding:0;
+	line-height:1.5;
+}
+.aside ul li {
+	padding-left:15px;
+	background-image:url(../images/ico-s.gif);
+	background-repeat:no-repeat;
+	background-position:left center;
+}
+.ad {
+	margin-top:10px;
+}
+.ad img {
+	border:0;
 }

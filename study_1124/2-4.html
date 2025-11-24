@@ -3,7 +3,8 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <title>Herb Kitchen</title>
-<link href="css/base1-5.css" rel="stylesheet" type="text/css">
+<link href="css/base.css" rel="stylesheet" type="text/css">
+<link href="css/2-4.css" rel="stylesheet" type="text/css">
 </head>
 
 <body>
@@ -28,11 +29,9 @@
       <p><img src="images/salad.jpg" alt="タコのカルパッチョの画像">ハーブは西洋料理で使われるものばかりではありません。葱やショウガ、ミョウガなど和食でおなじみの薬味も立派なハーブです。ハーブは西洋料理で使われるものばかりではありません。ハーブは西洋料理で使われるものばかりではありません。<br>
         葱やショウガ、ミョウガなど和食でおなじみの薬味も立派なハーブです。ハーブは西洋料理で使われるものばかりではありません。葱やショウガ、ミョウガなど和食でおなじみの薬味も立派なハーブです。ハーブは西洋料理で使われるものばかりではありません。</p>
     </div>
-    <div class="article">
-      <h3>しらすのペペロンチーノ</h3>
+    <div class="article"><h3>しらすのペペロンチーノ</h3>
       <p><img src="images/pasta.jpg" alt="しらすのペペロンチーノの画像">ハーブは西洋料理で使われるものばかりではありません。葱やショウガ、ミョウガなど和食でおなじみの薬味も立派なハーブです。ハーブは西洋料理で使われるものばかりではありません。葱やショウガ、ミョウガなど和食でおなじみの薬味も立派なハーブです。<br>
-        葱やショウガ、ミョウガなど和食でおなじみの薬味も立派なハーブです。ハーブは西洋料理で使われるものばかりではありません。葱やショウガ、ミョウガなど和食でおなじみの薬味も立派なハーブです。 </p>
-    </div>
+      葱やショウガ、ミョウガなど和食でおなじみの薬味も立派なハーブです。ハーブは西洋料理で使われるものばかりではありません。葱やショウガ、ミョウガなど和食でおなじみの薬味も立派なハーブです。 </p></div>
   </div>
   <div class="footer">
     <address>
@@ -45,12 +44,20 @@
     <h2>CSSファイルの表示</h2>
     <pre id="output"></pre>
     <script>
-      // 外部の sample.html を読み込む
-      fetch("css/base1-5.css")
+      fetch("css/base.css")
         .then((response) => response.text())
         .then((data) => {
           // そのままテキストとして表示（タグは解釈されない）
           document.getElementById("output").textContent = data;
+        })
+        .catch((error) => {
+          console.error("読み込みエラー:", error);
+        });
+      fetch("css/2-4.css")
+        .then((response) => response.text())
+        .then((data) => {
+          // そのままテキストとして表示（タグは解釈されない）
+          document.getElementById("output").textContent += data;
         })
         .catch((error) => {
           console.error("読み込みエラー:", error);

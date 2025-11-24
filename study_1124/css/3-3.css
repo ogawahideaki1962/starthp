@@ -1,0 +1,23 @@
+@charset "utf-8";
+.header , .nav {
+	padding:0 10px;
+}
+.section {
+	float:left;
+	margin-right:-200px;
+	width:100%;
+}
+.main {
+	margin-right:200px;
+	padding-left:10px;
+	padding-right:10px;
+}
+.aside {
+	float:left;
+	width:180px;
+	padding-left:10px;
+	padding-right:10px;
+}
+.footer {
+	clear:both;
+}
