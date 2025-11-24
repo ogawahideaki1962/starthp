@@ -64,8 +64,11 @@ header {
   </head>
   <body>
     <header>
-      <h1>サイトタイトル</h1>
-      <p>キャッチコピーや説明文</p>
+      <h1 id="showTitle"></h1>
+      <script>
+        document.getElementById("showTitle").textContent = document.title;
+      </script>
+       <p>キャッチコピーや説明文</p>
     </header>
 
     <nav>
