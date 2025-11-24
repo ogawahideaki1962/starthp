@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <title>タグの追加・削除をしてみよう</title>
+    <style>
+      body {
+        font-size: 14pt;
+        font-weight: plain;
+      }
+      h1 {
+        color: white;
+        font-size: 24pt;
+        background-color: red;
+      }
+      #area {
+        background-color: #ffeeee;
+        margin: 0px;
+        width: 500px;
+        height: 500px;
+      }
+      .newelement {
+        margin: 5px;
+        padding: 5px;
+        border: solid 1px red;
+      }
+    </style>
+    <script>
+      var count = 0;
+
+      function doDown(event) {
+        switch (event.buttons) {
+          case 1:
+            var w = event.clientX;
+            var h = event.clientY;
+            var obj = document.createElement('p');
+            obj.name = 'create element';
+            obj.className = 'newelement';
+            obj.textContent = "No. " + count++;
+            event.target.appendChild(obj);
+            break;
+          case 3:
+            if (event.target.name == "create element") {
+              var parent = event.target.parentElement;
+              parent.removeChild(event.target);
+            }
+            break;
+        }
+        event.preventDefault();
+      }
+    </script>
+  </head>
+
+  <body>
+    <h1 id="title">タグの追加・削除をしてみよう!</h1>
+    <p id="area" onmousedown="doDown(event);">※エレメントの追加</p>
+
+    <!-------------------------------------------------->
+    <h2>ソースファイルの表示</h2>
+    <pre id="output"></pre>
+    <script>
+      // 外部の sample.html を読み込む
+      fetch("sample_06.html")
+        .then((response) => response.text())
+        .then((data) => {
+          // そのままテキストとして表示（タグは解釈されない）
+          document.getElementById("output").textContent = data;
+        })
+        .catch((error) => {
+          console.error("読み込みエラー:", error);
+        });
+    </script>
+    <!-------------------------------------------------->
+  </body>
+</html>
