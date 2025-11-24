@@ -64,39 +64,14 @@ a {
 	text-align: right;
 }
 .nav ul li {
-	display: inline-block;
-	padding: 0 5px;
-	border-left: 1px solid #037d77;
+	display:inline-block;
+/*	padding:0 5px;
+	border-left: 1px solid #037d77;*/
 }
-.nav ul li:first-child {
+/*.nav ul li:first-child {
 	border-left: none;
-}
+}*/
 .nav ul li#now a {
 	color: #037d77;
-	font-weight: bold;
-}
-
-
-.aside h2 {
-	font-size: 90%;
-	margin-top:5px;
-}
-.aside ul {
-	list-style-type:none;
-	font-size:90%;
-	margin:0;
-	padding:0;
-	line-height:1.5;
-}
-.aside ul li {
-	padding-left:15px;
-	background-image:url(../images/ico-s.gif);
-	background-repeat:no-repeat;
-	background-position:left center;
-}
-.ad {
-	margin-top:10px;
-}
-.ad img {
-	border:0;
+/*	font-weight: bold;*/
 }
