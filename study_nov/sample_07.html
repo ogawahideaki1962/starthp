@@ -13,11 +13,14 @@
   </head>
 
   <body>
-    <h1 id="title">クリック検出まとめ!</h1>
+    <h2 id="showTitle"></h2>
+    <script>
+      document.getElementById("showTitle").textContent = document.title;
+    </script>
 
     <p>1. HTMLタグに直接書く（インラインイベントハンドラ）</p>
     <button onclick="alert('クリックされました')">クリック1</button>
-    
+
     <p>2. DOM要素のプロパティに代入</p>
     <button id="btn">クリック2</button>
     <script>

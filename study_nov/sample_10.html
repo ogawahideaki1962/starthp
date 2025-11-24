@@ -13,7 +13,10 @@
   </head>
 
   <body>
-    <h1 id="title">クリック後の処理まとめ!</h1>
+    <h2 id="showTitle"></h2>
+    <script>
+      document.getElementById("showTitle").textContent = document.title;
+    </script>
 
     <p>1. classを切り替える（toggle）</p>
     <button id="btn1">切り替え</button>

@@ -53,7 +53,10 @@
   </head>
 
   <body>
-    <h1 id="title">タグの追加・削除をしてみよう!</h1>
+    <h2 id="showTitle"></h2>
+    <script>
+      document.getElementById("showTitle").textContent = document.title;
+    </script>
     <p id="area" onmousedown="doDown(event);">※エレメントの追加</p>
 
     <!-------------------------------------------------->
