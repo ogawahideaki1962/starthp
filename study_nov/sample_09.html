@@ -17,6 +17,20 @@
       .tabContent {
         padding: 10px;
         border: 1px solid #ccc;
+        background-color: beige;
+      }
+      #menu {
+        list-style-type: none;
+        padding: 5px;
+        margin: 0;
+        border: 1px solid #bbb;
+        width: 150px;
+        background-color: aquamarine;
+      }
+      .menuItem {
+        padding: 8px;
+        border-bottom: 2px solid black;
+        cursor: pointer;
       }
     </style>
     <script></script>
@@ -31,9 +45,9 @@
     <p>1. 開閉式メニュー（ドロワーやアコーディオン）</p>
     <button id="menuBtn">メニュー</button>
     <ul id="menu" class="hidden">
-      <li>ホーム</li>
-      <li>サービス</li>
-      <li>お問い合わせ</li>
+      <li class="menuItem">ホーム</li>
+      <li class="menuItem">サービス</li>
+      <li class="menuItem">お問い合わせ</li>
     </ul>
     <script>
       document.getElementById("menuBtn").addEventListener("click", function () {

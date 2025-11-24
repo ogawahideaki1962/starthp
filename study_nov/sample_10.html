@@ -2,11 +2,27 @@
 <html lang="ja">
   <head>
     <meta charset="UTF-8" />
-    <title>クリック後の処理まとめ</title>
+    <title>クリック検出＋処理＋アニメーション</title>
     <style>
-      body {
-        font-size: 14pt;
-        font-weight: plain;
+      .menu {
+        width: 200px;
+        height: 100%;
+        background: lightgray;
+        position: fixed;
+        top: 0;
+        right: -200px; /* 初期状態は隠す */
+        transition: left 0.3s ease; /* アニメーション */
+      }
+      .menu.show {
+        right: 0; /* 表示状態 */
+      }
+      .box {
+        opacity: 1;
+        transition: opacity 0.5s ease;
+      }
+      .hidden {
+        opacity: 0;
+        pointer-events: none; /* 非表示時にクリックできないようにする */
       }
     </style>
     <script></script>
@@ -18,65 +34,23 @@
       document.getElementById("showTitle").textContent = document.title;
     </script>
 
-    <p>1. classを切り替える（toggle）</p>
-    <button id="btn1">切り替え</button>
-    <div id="box1">BOX</div>
+    <p>1. スライド表示（メニューやパネルを横から出す</p>
+    <button id="menuBtn">メニュー</button>
+    <div id="menu" class="menu">メニュー内容</div>
 
     <script>
-      document.getElementById("btn1").addEventListener("click", function () {
-        document.getElementById("box1").classList.toggle("active");
+      document.getElementById("menuBtn").addEventListener("click", function () {
+        document.getElementById("menu").classList.toggle("show");
       });
     </script>
 
-    <style>
-      #box {width: 100px;height: 100px;background: gray;}
-      .active {background: tomato;}
-    </style>
-
-    <p>2. テキストや内容を変更</p>
-    <button id="btn2">クリック</button>
-    <p id="msg2">まだクリックされていません</p>
+    <p>2. フェードイン／フェードアウト</p>
+    <button id="fadeBtn">表示切替</button>
+    <div id="box" class="box hidden">フェード表示される要素</div>
 
     <script>
-      document.getElementById("btn2").addEventListener("click", function() {
-      document.getElementById("msg2").textContent = "クリックされました！";
-    });
-    </script>
-
-    <p>3. 要素を追加・削除</p>
-    <button id="add3">追加</button>
-    <button id="remove3">削除</button>
-    <ul id="list3"></ul>
-
-    <script>
-      document.getElementById("add3").addEventListener("click", function() {
-      let li = document.createElement("li");
-      li.textContent = "新しい項目";
-      document.getElementById("list3").appendChild(li);
-      });
-
-      document.getElementById("remove3").addEventListener("click", function() {
-        let list = document.getElementById("list3");
-        if (list.lastChild) list.removeChild(list.lastChild);
-      });
-    </script>
-
-    <p>4. スタイルを直接変更</p>
-    <button id="btn4">色変更</button>
-    <div id="box4">BOX</div>
-
-    <script>
-      document.getElementById("btn4").addEventListener("click", function() {
-        document.getElementById("box4").style.backgroundColor = "skyblue";
-      });
-    </script>
-
-    <p>5. 別ページへ移動</p>
-    <button id="btn5">移動</button>
-
-    <script>
-      document.getElementById("btn5").addEventListener("click", function() {
-        window.location.href = "https://ogawahideaki1962.github.io/starthp/";
+      document.getElementById("fadeBtn").addEventListener("click", function () {
+        document.getElementById("box").classList.toggle("hidden");
       });
     </script>
 
