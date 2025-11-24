@@ -6,19 +6,22 @@
     <style>
       .menu {
         width: 200px;
-        height: 100%;
-        background: lightgray;
+        height: 70%;
+        background: burlywood;
         position: fixed;
-        top: 0;
-        right: -200px; /* 初期状態は隠す */
-        transition: left 0.3s ease; /* アニメーション */
+        top: 25%;
+        left: -200px; /* 初期状態は隠す */
+        transition: left 0.5s ease; /* アニメーション */
       }
       .menu.show {
-        right: 0; /* 表示状態 */
+        left: 0; /* 表示状態 */
       }
       .box {
+        color: blue;
+        font-size: 20px;
+        font-weight: bold;
         opacity: 1;
-        transition: opacity 0.5s ease;
+        transition: opacity 1s ease;
       }
       .hidden {
         opacity: 0;
@@ -59,7 +62,7 @@
     <pre id="output"></pre>
     <script>
       // 外部の sample.html を読み込む
-      fetch("sample_10.html")
+      fetch("s20251124_04.html")
         .then((response) => response.text())
         .then((data) => {
           // そのままテキストとして表示（タグは解釈されない）
