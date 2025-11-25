@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ボックスのテスト01</title>
+    <link href="styles.css" rel="stylesheet" type="text/css" />
+    <link href="1125_01.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+    <header>
+      <h2 id="showTitle"></h2>
+      <script>
+        document.getElementById("showTitle").textContent = document.title;
+      </script>
+    </header>
+    <main>
+      <div id="box1">
+        <p>box1</p>
+        <div id="box2">
+          <p>box2 xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</p>
+          <div id="box3">
+            <p id="img1">
+              box3
+              <img src="images/pasta.jpg" alt="画像の説明" title="pasta" />
+            </p>
+            <p id="img2">
+              box3
+              <img src="images/salad.jpg" alt="画像の説明" title="salad" />
+            </p>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer>
+      <p>&copy; 2025 サイト名. All rights reserved.</p>
+    </footer>
+    <script src="script.js"></script>
+  </body>
+</html>
