@@ -35,10 +35,15 @@
 img {
     border: 1px solid black;
 }
-
-form {
-    margin-top: 20px;
-    border: 2px solid black;
-    padding: 10px;
-    background-color: #f9f9f9;
+#img1 {
+    float: left;
+    margin-right: 10px;
+}
+#text1 {
+    float: right;
+    margin-right: 10px;
+}
+footer {
+    background-color: #e2e5eb;
+    color: white;
 }

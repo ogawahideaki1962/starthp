@@ -1,0 +1,17 @@
+#header {
+    font-size: 1.5em;
+    margin-bottom: 20px;
+    background-color: aquamarine;
+}
+
+.explain {
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+footer {
+    background-color: #e2e5eb;
+    color: white;
+    text-align: center;
+    padding: 0.5em;
+}
