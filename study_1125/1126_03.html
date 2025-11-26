@@ -23,6 +23,12 @@
   display: block;
   clear: both;
 }
+img {
+  width: 70px;
+  float: left;
+  max-width: 100%;
+  height: auto;
+}
 </style>
 </head>
 <body>
@@ -33,7 +39,13 @@
     <div class="container clearfix">    
   <div class="sidebar">サイドバー
   </div>
-  <div class="content">本文コンテンツ  </div>
+  <div class="content">
+    <img src="images/pasta.jpg" alt="">
+    画像をfloat right で左に寄せ、説明文をその右に表示し、画像の下側に回り込むようなレイアウトになっています。
+    <br>このような場合は、floatを使うのが良いでしょう。display flex とは使い道が異なりますので、注意が必要です。
+    慣れていきましょうね。
+
+  </div>
 </div>
 <p>floatを使ったレイアウト例です。</p>
 <p>floatを使うとサイドバーを右に寄せることができます。</p>
