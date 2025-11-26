@@ -29,8 +29,14 @@
     </script>
 
     <style>
-      #box {width: 100px;height: 100px;background: gray;}
-      .active {background: tomato;}
+      #box {
+        width: 100px;
+        height: 100px;
+        background: gray;
+      }
+      .active {
+        background: tomato;
+      }
     </style>
 
     <p>2. テキストや内容を変更</p>
@@ -38,9 +44,9 @@
     <p id="msg2">まだクリックされていません</p>
 
     <script>
-      document.getElementById("btn2").addEventListener("click", function() {
-      document.getElementById("msg2").textContent = "クリックされました！";
-    });
+      document.getElementById("btn2").addEventListener("click", function () {
+        document.getElementById("msg2").textContent = "クリックされました！";
+      });
     </script>
 
     <p>3. 要素を追加・削除</p>
@@ -49,13 +55,13 @@
     <ul id="list3"></ul>
 
     <script>
-      document.getElementById("add3").addEventListener("click", function() {
-      let li = document.createElement("li");
-      li.textContent = "新しい項目";
-      document.getElementById("list3").appendChild(li);
+      document.getElementById("add3").addEventListener("click", function () {
+        let li = document.createElement("li");
+        li.textContent = "新しい項目";
+        document.getElementById("list3").appendChild(li);
       });
 
-      document.getElementById("remove3").addEventListener("click", function() {
+      document.getElementById("remove3").addEventListener("click", function () {
         let list = document.getElementById("list3");
         if (list.lastChild) list.removeChild(list.lastChild);
       });
@@ -66,7 +72,7 @@
     <div id="box4">BOX</div>
 
     <script>
-      document.getElementById("btn4").addEventListener("click", function() {
+      document.getElementById("btn4").addEventListener("click", function () {
         document.getElementById("box4").style.backgroundColor = "skyblue";
       });
     </script>
@@ -75,13 +81,14 @@
     <button id="btn5">移動</button>
 
     <script>
-      document.getElementById("btn5").addEventListener("click", function() {
+      document.getElementById("btn5").addEventListener("click", function () {
         window.location.href = "https://ogawahideaki1962.github.io/starthp/";
       });
     </script>
-       <iframe 
-   src="disptxt.html?url=s20251124_02.html" 
-    style="width:100%; height:300px;"
-   frameborder="0"></iframe>
+    <iframe
+      src="disptxt.html?url=s20251124_02.html"
+      style="width: 100%; height: 400px"
+      frameborder="0"
+    ></iframe>
   </body>
 </html>

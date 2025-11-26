@@ -1,57 +1,74 @@
 <!DOCTYPE html>
 <html lang="ja">
-<head>
-  <meta charset="UTF-8">
-  <title>イベントバブリングとキャプチャ</title>
-  <style>
-    #parent {
-      padding: 20px;
-      border: 2px solid black;
-      background-color: #f0f0f0;
-    }
-    #child {
-      padding: 10px;
-      border: 2px solid blue;
-      background-color: #d0e0ff;
-    }
-  </style>
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <title>イベントバブリングとキャプチャ</title>
+    <style>
+      #parent {
+        padding: 20px;
+        border: 2px solid black;
+        background-color: #f0f0f0;
+      }
+      #child {
+        padding: 10px;
+        border: 2px solid blue;
+        background-color: #d0e0ff;
+      }
+    </style>
+  </head>
+  <body>
     <h2 id="showTitle"></h2>
-    <script>document.getElementById("showTitle").textContent = document.title;</script>
+    <script>
+      document.getElementById("showTitle").textContent = document.title;
+    </script>
 
-  <div id="parent">
-    親要素
-    <button id="child">子要素ボタン</button>
-  </div>
+    <div id="parent">
+      親要素
+      <button id="child">子要素ボタン</button>
+    </div>
 
-  <script>
-    const parent = document.getElementById("parent");
-    const child = document.getElementById("child");
+    <script>
+      const parent = document.getElementById("parent");
+      const child = document.getElementById("child");
 
-    // バブリング（デフォルト: 第3引数 false）
-    parent.addEventListener("click", () => {
-      alert("親要素（バブリング）");
-    }, false);
+      // バブリング（デフォルト: 第3引数 false）
+      parent.addEventListener(
+        "click",
+        () => {
+          alert("親要素（バブリング）");
+        },
+        false
+      );
 
-    child.addEventListener("click", () => {
-      alert("子要素（バブリング）");
-    }, false);
+      child.addEventListener(
+        "click",
+        () => {
+          alert("子要素（バブリング）");
+        },
+        false
+      );
 
-    // キャプチャ（第3引数 true）
-    parent.addEventListener("click", () => {
-      alert("親要素（キャプチャ）");
-    }, true);
+      // キャプチャ（第3引数 true）
+      parent.addEventListener(
+        "click",
+        () => {
+          alert("親要素（キャプチャ）");
+        },
+        true
+      );
 
-    child.addEventListener("click", () => {
-      alert("子要素（キャプチャ）");
-    }, true);
-  </script>
-      <iframe
+      child.addEventListener(
+        "click",
+        () => {
+          alert("子要素（キャプチャ）");
+        },
+        true
+      );
+    </script>
+    <iframe
       src="disptxt.html?url=sample_02.html"
-      style="width: 100%; height: 300px"
+      style="width: 100%; height: 400px"
       frameborder="0"
     ></iframe>
-
-</body>
+  </body>
 </html>

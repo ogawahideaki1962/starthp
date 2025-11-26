@@ -1,69 +1,72 @@
 <!DOCTYPE html>
 <html lang="ja">
-<head>
-  <meta charset="UTF-8">
-  <title>入力履歴（最新が上）</title>
-  <style>
-    #fixedDisplay {
-      position: fixed;
-      top: 10px;
-      right: 10px;
-      background: #f9f9f9;
-      padding: 15px;
-      border: 1px solid #ccc;
-      width: 300px;
-      max-height: 400px;
-      overflow-y: auto; /* 履歴が増えたらスクロール可能に */
-    }
-    #fixedDisplay h3 {
-      margin-top: 0;
-      font-size: 14px;
-      border-bottom: 1px solid #ccc;
-    }
-    .entry {
-      margin-bottom: 10px;
-      padding-bottom: 5px;
-      border-bottom: 1px dashed #aaa;
-    }
-  </style>
-</head>
-<body>
-  <!-- 入力フォーム -->
-  <form id="myForm">
-    <label>名前: 
-      <input type="text" id="name" required>
-    </label><br><br>
-    <label>メール: 
-      <input type="email" id="email" required>
-    </label><br><br>
-    <label>コメント: <br>
-      <textarea id="comment" rows="4" cols="30"></textarea>
-    </label><br><br>
-    <button type="submit">追加表示</button>
-  </form>
+  <head>
+    <meta charset="UTF-8" />
+    <title>入力履歴（最新が上）</title>
+    <style>
+      #fixedDisplay {
+        position: fixed;
+        top: 10px;
+        right: 10px;
+        background: #f9f9f9;
+        padding: 15px;
+        border: 1px solid #ccc;
+        width: 300px;
+        max-height: 400px;
+        overflow-y: auto; /* 履歴が増えたらスクロール可能に */
+      }
+      #fixedDisplay h3 {
+        margin-top: 0;
+        font-size: 14px;
+        border-bottom: 1px solid #ccc;
+      }
+      .entry {
+        margin-bottom: 10px;
+        padding-bottom: 5px;
+        border-bottom: 1px dashed #aaa;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- 入力フォーム -->
+    <form id="myForm">
+      <label
+        >名前:
+        <input type="text" id="name" required /> </label
+      ><br /><br />
+      <label
+        >メール:
+        <input type="email" id="email" required /> </label
+      ><br /><br />
+      <label
+        >コメント: <br />
+        <textarea id="comment" rows="4" cols="30"></textarea></label
+      ><br /><br />
+      <button type="submit">追加表示</button>
+    </form>
 
-  <!-- 固定位置の表示領域 -->
-  <div id="fixedDisplay">
-    <h3>入力履歴</h3>
-    <div id="entries"></div>
-  </div>
+    <!-- 固定位置の表示領域 -->
+    <div id="fixedDisplay">
+      <h3>入力履歴</h3>
+      <div id="entries"></div>
+    </div>
 
-  <script>
-    const form = document.getElementById('myForm');
-    const entries = document.getElementById('entries');
+    <script>
+      const form = document.getElementById("myForm");
+      const entries = document.getElementById("entries");
 
-    form.addEventListener('submit', function(event) {
-      event.preventDefault(); // ページリロード防止
+      form.addEventListener("submit", function (event) {
+        event.preventDefault(); // ページリロード防止
 
-      const name = document.getElementById('name').value;
-      const email = document.getElementById('email').value;
-      const comment = document.getElementById('comment').value;
+        const name = document.getElementById("name").value;
+        const email = document.getElementById("email").value;
+        const comment = document.getElementById("comment").value;
 
-      // コメントが空なら「コメントなし」
-      const commentText = comment.trim() === "" ? "コメントなし" : comment;
+        // コメントが空なら「コメントなし」
+        const commentText = comment.trim() === "" ? "コメントなし" : comment;
 
-      // 新しい入力内容をHTMLとして作成
-      const newEntry = `
+        // 新しい入力内容をHTMLとして作成
+        const newEntry = `
         <div class="entry">
           <p><strong>名前:</strong> ${name}</p>
           <p><strong>メール:</strong> ${email}</p>
@@ -71,18 +74,17 @@
         </div>
       `;
 
-      // 最新の入力を一番上に追加
-      entries.innerHTML = newEntry + entries.innerHTML;
+        // 最新の入力を一番上に追加
+        entries.innerHTML = newEntry + entries.innerHTML;
 
-      // 入力欄をクリア
-      form.reset();
-    });
-  </script>
-      <iframe
+        // 入力欄をクリア
+        form.reset();
+      });
+    </script>
+    <iframe
       src="disptxt.html?url=test_form.html"
-      style="width: 100%; height: 300px"
+      style="width: 100%; height: 400px"
       frameborder="0"
     ></iframe>
-
-</body>
+  </body>
 </html>

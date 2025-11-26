@@ -30,18 +30,21 @@
 
       function doDown(event) {
         console.log(event);
-        switch (event.buttons) { // 押されたボタンの判定
+        switch (
+          event.buttons // 押されたボタンの判定
+        ) {
           case 1:
             var w = event.clientX;
             var h = event.clientY;
-            var obj = document.createElement('p'); // エレメントの作成
-            obj.name = 'create element';
-            obj.className = 'newelement';
+            var obj = document.createElement("p"); // エレメントの作成
+            obj.name = "create element";
+            obj.className = "newelement";
             obj.textContent = "No. " + count++;
             event.target.appendChild(obj); // エレメントの追加
             break;
           case 3:
-            if (event.target.name == "create element") { // 追加したエレメントなら
+            if (event.target.name == "create element") {
+              // 追加したエレメントなら
               var parent = event.target.parentElement; // 親エレメントの取得
               parent.removeChild(event.target); // エレメントの削除
             }
@@ -61,9 +64,8 @@
 
     <iframe
       src="disptxt.html?url=sample_01.html"
-      style="width: 100%; height: 300px"
+      style="width: 100%; height: 400px"
       frameborder="0"
     ></iframe>
-
   </body>
 </html>

@@ -13,7 +13,9 @@
   </head>
   <body>
     <h2 id="showTitle"></h2>
-    <script>document.getElementById("showTitle").textContent = document.title;</script>
+    <script>
+      document.getElementById("showTitle").textContent = document.title;
+    </script>
 
     <p class="highlight">これは強調表示された段落です。</p>
     <p>これは普通の段落です。</p>
@@ -29,7 +31,7 @@
       highlights[0].style.backgroundColor = "yellow";
       highlights[1].style.backgroundColor = "lightblue";
       highlights[2].style.backgroundColor = "yellow";
-//      highlights.style.backgroundColor = "green";
+      //      highlights.style.backgroundColor = "green";
       button.addEventListener("click", function () {
         console.log(highlights);
         // HTMLCollectionを配列風にループ
@@ -43,11 +45,10 @@
         }
       });
     </script>
-        <iframe
+    <iframe
       src="disptxt.html?url=test_class.html"
-      style="width: 100%; height: 300px"
+      style="width: 100%; height: 400px"
       frameborder="0"
     ></iframe>
-
   </body>
 </html>
