@@ -58,22 +58,5 @@
       document.getElementById("showTitle").textContent = document.title;
     </script>
     <p id="area" onmousedown="doDown(event);">※エレメントの追加</p>
-
-    <!-------------------------------------------------->
-    <h2>ソースファイルの表示</h2>
-    <pre id="output"></pre>
-    <script>
-      // 外部の sample.html を読み込む
-      fetch("sample_06.html")
-        .then((response) => response.text())
-        .then((data) => {
-          // そのままテキストとして表示（タグは解釈されない）
-          document.getElementById("output").textContent = data;
-        })
-        .catch((error) => {
-          console.error("読み込みエラー:", error);
-        });
-    </script>
-    <!-------------------------------------------------->
   </body>
 </html>

@@ -53,12 +53,18 @@
         text-align: center;
         padding: 1em;
       }
+      .htmlsrc {
+        font-size: 0.8em;
+        margin-left: 10px;
+      }
     </style>
   </head>
   <body>
     <header>
-    <h2 id="showTitle"></h2>
-    <script>document.getElementById("showTitle").textContent = document.title;</script>
+      <h2 id="showTitle"></h2>
+      <script>
+        document.getElementById("showTitle").textContent = document.title;
+      </script>
     </header>
 
     <nav>
@@ -72,20 +78,23 @@
       <article>
         <h2>メインメニュー</h2>
         <ul>
-          <li><a href="test_map.html">地図の表示</a></li>
-          <li><a href="test_form.html">入力履歴（最新が上）</a></li>
-          <li><a href="test_class.html">classで複数要素を操作</a></li>
+          <li>
+            <a href="test_map.html">地図の表示</a>
+            <a class="htmlsrc" href="disptxt.html?url=test_map.html"
+              >test_map.html</a>
+          </li>
+          <li>
+            <a href="test_form.html">入力履歴（最新が上）</a>
+            <a class="htmlsrc" href="disptxt.html?url=test_form.html"
+              >test_form.html</a>
+          </li>
+          <li>
+            <a href="test_class.html">classで複数要素を操作</a>
+            <a class="htmlsrc" href="disptxt.html?url=test_class.html"
+              >test_class.html</a>
+          </li>
         </ul>
       </article>
-
-      <aside>
-        <h3>サイドメニュー</h3>
-        <ul>
-          <li><a href="#">リンク1</a></li>
-          <li><a href="#">リンク2</a></li>
-          <li><a href="#">リンク3</a></li>
-        </ul>
-      </aside>
     </main>
 
     <footer>
