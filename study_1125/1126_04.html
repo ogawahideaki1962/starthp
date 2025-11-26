@@ -13,6 +13,7 @@
       .content {
         flex: 1; /* 残りの幅を自動で埋める */
         background: lightyellow;
+        margin-right : 10px;
       }
       .sidebar {
         width: 200px;
@@ -27,17 +28,27 @@
     </script>
 
     <div class="container">
-      <div class="content">本文コンテンツ</div>
-      <div class="sidebar">サイドバー</div>
-    </div>
-    <p>
-        <ul>
+      <div class="content">本文コンテンツ
+          <ul>
             <li>Flexboxを使うとサイドバーの幅を固定し、本文エリアが自動で調整される</li>
             <li>親要素の高さが消えないのでclearfixは不要</li>
             <li>display: flex;  を指定するだけで横並びになる</li>
             <li>本文は flex: 1; で残りの幅を自動調整</li>
-            <li>- 余白や高さの調整が自然に行われるので、clearfix不要</li>
+            <li>余白や高さの調整が自然に行われるので、clearfix不要</li>
         </ul>
+      
+      </div>
+      <div class="sidebar">サイドバー
+        <ol>
+          <li>メニュー1</li>
+          <li>メニュー2</li>
+          <li>メニュー3</li>
+          <li>メニュー4</li>
+          <li>メニュー5</li>
+        </ol>
+      </div>
+    </div>
+    <p>
    </p>
    <iframe 
    src="disptxt.html?url=1126_04.html" 
