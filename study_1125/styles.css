@@ -37,7 +37,8 @@
 
   article {
       flex: 3;
-      padding: 1em;
+/*      padding: 1em; */
+            background-color: #dad8d8;
   }
 
   aside {

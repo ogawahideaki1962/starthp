@@ -45,7 +45,7 @@ a {
 	padding: 5px;
 	border: solid 1px #ccc;
 	margin: 10px;
-	min-height: 150px;
+/*	min-height: 150px; */
 	zoom: 1;
 }
 .article:after {
