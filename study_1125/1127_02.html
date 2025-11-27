@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="sample text" />
+    <link rel="stylesheet" href="../assets/css/sanitize.css" />
+    <title>CSS GRIDの基本</title>
+    <link href="styles.css" rel="stylesheet" type="text/css" />
+    <style>
+      body {
+        display: grid;
+        grid-template-columns: 2fr 1fr; /* 左:広め(メイン)、右:狭め(サイドバー) */
+        grid-template-rows: auto 1fr auto; /* 上:ヘッダー、中:メイン+サイド、下:フッター */
+        grid-template-areas:
+          "header header"
+          "main   aside"
+          "footer footer";
+        gap: 20px;
+        min-height: 100vh; /* 全画面に広げる */
+      }
+
+      header {
+        color: black;
+        grid-area: header;
+        background: #f0f0f0;
+      }
+
+      main {
+        grid-area: main;
+        background: #e0f7fa;
+      }
+
+      aside {
+        grid-area: aside;
+        background: #ffe0b2;
+      }
+
+      footer {
+        grid-area: footer;
+        background: #c8e6c9;
+      }
+
+      @media (max-width: 535px) {
+        body {
+          grid-template-columns: 1fr; /* 1列だけにする */
+          grid-template-areas:
+            "header"
+            "main"
+            "aside"
+            "footer";
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>ヘッダー
+              <h1 id="showTitle"></h1>
+      <script>
+        document.getElementById("showTitle").textContent = document.title;
+        document.write(
+            "innerWidth=" + 
+            window.innerWidth + "<br>");
+        document.write(
+          "clientWidth=" +
+            document.documentElement.clientWidth +
+            "<br>"
+        );
+      </script>       
+
+    </header>
+    <main>メインコンテンツ</main>
+    <aside>サイドバー</aside>
+    <footer>フッター</footer>
+  </body>
+</html>
