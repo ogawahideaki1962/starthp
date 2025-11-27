@@ -1,3 +1,9 @@
+@charset "UTF-8";
+
+html {
+    font-size: 62.5%;
+}
+
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -7,13 +13,21 @@ body {
 }
 
 header {
-    background-color: #4caf50;
-    background: url("https://picsum.photos/800/400") no-repeat center/cover;
+    height: 20%;
+    background:
+        url("https://picsum.photos/800/400") no-repeat center/cover;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
     color: white;
+    display: flex;
+    flex-direction: column;
+    /* 縦方向に配置 */
+    justify-content: space-between;
+    padding: 20px 20px 20px 20px;
     text-shadow: 3px 3px 6px rgba(255, 253, 253, 0.5);
-    padding: 1em;
-    text-align: center;
-}
+        /* 横2px, 縦2px, ぼかし5px, 半透明黒 */
+    }
 
 nav {
     background-color: #333;
