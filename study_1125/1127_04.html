@@ -76,6 +76,7 @@
       }
 
       .dropbtn {
+        width: 25%;
         background: rgba(155, 155, 255, 0.2);
         background: radial-gradient(circle, rgb(228, 227, 227), blue);
         background: conic-gradient(from 30deg, red, yellow, green);
@@ -94,8 +95,8 @@
       }
 
       .dropdown-content {
-        margin-left: 20px;
         display: none;
+        width: 25%;
         position: absolute;
         min-width: auto;
         background: rgba(255, 255, 255, 0.15);
@@ -108,8 +109,11 @@
       .dropdown-content a {
         color: #fff;
         padding: 6px 26px;
+        padding: 10px 20px;
         text-align: center;
-        background: linear-gradient(to bottom, rgb(228, 227, 227), blue);
+        border-radius: 12px;
+        border: 1px solid rgba(176, 176, 177,0.3) ;
+        background: linear-gradient(to bottom, rgba(228, 227, 227,0), rgba(0,0,250,0.4));
         text-decoration: none;
         display: block;
         transition: background 0.2s ease;
@@ -118,7 +122,7 @@
       .dropdown-content a:hover {
         background: rgba(255, 255, 255, 0.05);
         background: linear-gradient(45deg, rgb(228, 227, 227), blue);
-        background: linear-gradient(to bottom, rgb(228, 227, 227), red);
+        background: linear-gradient(to bottom, rgba(228, 227, 227,0), rgba(227,0,0,0.4));
       }
 
       .dropdown:hover .dropdown-content {
@@ -151,7 +155,6 @@
           <a href="#">Contact</a>
         </div>
       </nav>
-      <button class="btm">ボタン</button>
     </main>
   </body>
   <iframe
