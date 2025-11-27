@@ -80,7 +80,15 @@
       <h1 id="showTitle"></h1>
       <script>
         document.getElementById("showTitle").textContent = document.title;
-      </script>
+        document.write(
+            "innerWidth=" + 
+            window.innerWidth + "<br>");
+        document.write(
+          "clientWidth=" +
+            document.documentElement.clientWidth +
+            "<br>"
+        );
+      </script>       
       <p>キャッチコピーや説明文</p>
     </header>
 
