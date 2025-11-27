@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="sample text" />
+    <link rel="stylesheet" href="../assets/css/sanitize.css" />
+    <title>CSS GRIDの基本2</title>
+    <link href="styles.css" rel="stylesheet" type="text/css" />
+    <style>
+      /* 外側のGrid */
+      .outer-grid {
+        display: grid;
+        grid-template-rows: auto 1fr auto;
+        grid-template-columns: 1fr;
+        grid-template-areas:
+          "header"
+          "main"
+          "footer";
+        min-height: 100vh;
+      }
+
+      header {
+        grid-area: header;
+        min-height: 100px;
+      }
+      main {
+        grid-area: main;
+      }
+      footer {
+        grid-area: footer;
+        min-height: 100px;
+      }
+
+      /* 内側のGrid（mainの中） */
+      .inner-grid {
+        display: grid;
+        grid-template-columns: 1fr 2fr 1fr; /* 左:aside, 中:article, 右:section */
+        grid-template-areas: "aside article section"; /* 1行に3つ並べる */
+        gap: 20px;
+      }
+
+      aside {
+        grid-area: aside;
+        background: #ffe0b2;
+      }
+      article {
+        grid-area: article;
+        background: #e0f7fa;
+      }
+      section {
+        grid-area: section;
+        background: #fce4ec;
+      }
+      @media (max-width: 640px) {
+        .inner-grid {
+          grid-template-columns: 1fr; /* 1列だけにする */
+          grid-template-areas:
+            "article"
+            "section"
+            "aside";
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="outer-grid">
+      <header>
+        ヘッダー
+        <h1 id="showTitle"></h1>
+        <script>
+          document.getElementById("showTitle").textContent = document.title;
+          document.write("innerWidth=" + window.innerWidth + "<br>");
+          document.write(
+            "clientWidth=" + document.documentElement.clientWidth + "<br>"
+          );
+        </script>
+      </header>
+      <main class="inner-grid">
+        <article>記事</article>
+        <section>セクション</section>
+        <aside>サイドバー</aside>
+      </main>
+      <footer>フッター</footer>
+    </div>
+  </body>
+</html>
