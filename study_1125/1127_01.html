@@ -14,7 +14,15 @@
       <h2 id="showTitle"></h2>
       <script>
         document.getElementById("showTitle").textContent = document.title;
-      </script>
+        document.write(
+            "window.innerWidth=" + 
+            window.innerWidth + "<br>");
+        document.write(
+          "window.documentElement.clientWidth=" +
+            window.documentElement.clientWidth +
+            "<br>"
+        );
+      </script>       
     </header>
     <main>
       <img src="images/responsive01.png" alt="画像01" />
