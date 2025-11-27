@@ -58,7 +58,7 @@
 -------------------->
     <style>
       main {
-        height: 200px;
+        height: 300px;
         background-image: url("images/header-bg.jpg");
         background-size: cover;
         background-position: center;
@@ -77,6 +77,9 @@
 
       .dropbtn {
         background: rgba(155, 155, 255, 0.2);
+        background: radial-gradient(circle, rgb(228, 227, 227), blue);
+        background: conic-gradient(from 30deg, red, yellow, green);
+        background: linear-gradient(to bottom, rgb(228, 227, 227), green);
         color: #fff;
         padding: 10px 20px;
         border: none;
@@ -87,14 +90,14 @@
       }
 
       .dropbtn:hover {
-        background: rgba(255, 255, 255, 0.3);
+        background: rgba(255, 255, 255, 0.05);
       }
 
       .dropdown-content {
         margin-left: 20px;
         display: none;
         position: absolute;
-        min-width: 180px;
+        min-width: auto;
         background: rgba(255, 255, 255, 0.15);
         border-radius: 12px;
         box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
@@ -104,18 +107,31 @@
 
       .dropdown-content a {
         color: #fff;
-        padding: 12px 16px;
+        padding: 6px 26px;
+        text-align: center;
+        background: linear-gradient(to bottom, rgb(228, 227, 227), blue);
         text-decoration: none;
         display: block;
         transition: background 0.2s ease;
       }
 
       .dropdown-content a:hover {
-        background: rgba(255, 255, 255, 0.25);
+        background: rgba(255, 255, 255, 0.05);
+        background: linear-gradient(45deg, rgb(228, 227, 227), blue);
+        background: linear-gradient(to bottom, rgb(228, 227, 227), red);
       }
 
       .dropdown:hover .dropdown-content {
         display: block;
+      }
+
+      .btm {
+        background: linear-gradient(45deg, rgb(228, 227, 227), blue);
+        height: 40px;
+        width: 100px;
+        border-radius: 6px;
+        justify-content: center;
+        text-align: center;
       }
     </style>
   </head>
@@ -135,6 +151,7 @@
           <a href="#">Contact</a>
         </div>
       </nav>
+      <button class="btm">ボタン</button>
     </main>
   </body>
   <iframe
