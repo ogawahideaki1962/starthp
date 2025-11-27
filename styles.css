@@ -1,7 +1,7 @@
 @charset "UTF-8";
 
 html {
-    font-size: 62.5%;
+    font-size: 100%;
 }
 
 body {
@@ -60,7 +60,6 @@ nav a {
 
 nav a:hover {
     background-color: #575757;
-    text-decoration: underline;
 }
 
 main {
