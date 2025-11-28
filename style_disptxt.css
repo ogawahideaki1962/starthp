@@ -16,6 +16,7 @@ h1 {
 pre {
     /* width: max-content; */
     font-family: serif;
+    /* font-size: medium; */
     background-color: #f4f4f4;
     padding: 10px;
     border: 1px solid #ccc;
