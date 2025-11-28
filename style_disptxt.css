@@ -1,5 +1,10 @@
+/* CSS（style_disptxt.css） */
+
 @charset "UTF-8";
-/* style_112801.css */
+
+html {
+    font-size: 100%;
+}
 
 body {
     font-family: Arial, sans-serif;
