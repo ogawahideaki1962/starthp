@@ -7,30 +7,10 @@
     <meta name="description" content="sample text" />
     <link rel="stylesheet" href="../assets/css/sanitize.css" />
     <link rel="stylesheet" href="../styles.css" />
-    <title>GRID,FLEXの復習</title>
+    <title>コーディング学習サイト（入門１）</title>
     <style>
-      .flexstyle {
+      .mainContents {
         width: 100%;
-        display: flex;
-        margin: 20px;
-        align-items: center;  /* 垂直方向の中央揃え */
-        justify-content: center;  /* 水平方向の中央揃え */
-      }
-      .flexitem {
-        width: 160px;
-        height: max-content;
-        margin: 20px;
-        align-items: center;
-      }
-      .grid {
-        width: 80%;
-        display: grid;
-        grid-template-columns: repeat(3, 1fr); /* 最大3列 */
-        gap: 10px; /* 要素間の余白 */
-      }
-      .imgbox {
-        width: 200px;
-        height: auto;
       }
     </style>
   </head>
@@ -38,27 +18,68 @@
     <header>
       <h1 id="showTitle"></h1>
       <script>
-        document.getElementById("showTitle").textContent = document.title;
+        document.getElementById('showTitle').textContent = document.title;
       </script>
     </header>
     <main>
+      <div class="mainContents">
+        <a href="sample01/">デモ sample01 </a>
+        <iframe
+          src="../disptxt.html?url=./study_1128/sample01/index.html"
+          style="width: 100%; height: 400px"
+          frameborder="0"
+        ></iframe>
+        <iframe
+          src="../disptxt.html?url=./study_1128/sample01/css/style.css"
+          style="width: 100%; height: 400px"
+          frameborder="0"
+        ></iframe>
+      </div>
+
       <div class="flexstyle">
-        <img class="flexitem" src="https://dummyimage.com/300x200/00f/fff" alt="" />
-        <img class="flexitem" src="https://dummyimage.com/150x80/005/fff" alt="" />
-        <img class="flexitem" src="https://dummyimage.com/200x200/050/fff" alt="" />
+        <img
+          class="flexitem"
+          src="https://dummyimage.com/300x200/00f/fff"
+          alt=""
+        />
+        <img
+          class="flexitem"
+          src="https://dummyimage.com/150x80/005/fff"
+          alt=""
+        />
+        <img
+          class="flexitem"
+          src="https://dummyimage.com/200x200/050/fff"
+          alt=""
+        />
       </div>
       <div class="grid">
-        <img class="imgbox" src="https://dummyimage.com/300x200/500/fff" alt="" />
-        <img class="imgbox" src="https://dummyimage.com/300x200/055/fff" alt="" />
-        <img class="imgbox" src="https://dummyimage.com/150x80/550/fff" alt="" />
-        <img class="imgbox" src="https://dummyimage.com/150x80/50f/fff" alt="" />
-        <img class="imgbox" src="https://dummyimage.com/150x80/505/fff" alt="" />
+        <img
+          class="imgbox"
+          src="https://dummyimage.com/300x200/500/fff"
+          alt=""
+        />
+        <img
+          class="imgbox"
+          src="https://dummyimage.com/300x200/055/fff"
+          alt=""
+        />
+        <img
+          class="imgbox"
+          src="https://dummyimage.com/150x80/550/fff"
+          alt=""
+        />
+        <img
+          class="imgbox"
+          src="https://dummyimage.com/150x80/50f/fff"
+          alt=""
+        />
+        <img
+          class="imgbox"
+          src="https://dummyimage.com/150x80/505/fff"
+          alt=""
+        />
       </div>
     </main>
-    <iframe
-      src="../disptxt.html?url=1127_05.html"
-      style="width: 100%; height: 400px"
-      frameborder="0"
-    ></iframe>
   </body>
 </html>
