@@ -29,14 +29,18 @@
         word-wrap: break-word; /* 単語の途中でも折り返す */
       }
     </style>
+    <link rel="stylesheet" href="./style_disptxt.css" />
   </head>
   <body>
     <header></header>
     <main>
+      <a class="fixed-btn" id="btn1" href="#pagetop">先頭に戻る</a>
+     <a class="fixed-btn" id="btn2" href="#pageend">最後に飛ぶ</a>
+ 
       <script>
         const params = new URLSearchParams(window.location.search);
         const url = params.get('url'); // URLパラメータからファイル名を取得"
-        document.write('<h1>' + url + '</h1>'); // ファイル名を表示
+        document.write('<h1 id="pagetop">' + url + '</h1>'); // ファイル名を表示
         fetch(url)
           .then((response) => response.text())
           .then((data) => {
@@ -48,6 +52,7 @@
           });
       </script>
       <pre id="output"></pre>
+      <h1 id="pageend">ページエンド</h1>
     </main>
   </body>
 </html>
