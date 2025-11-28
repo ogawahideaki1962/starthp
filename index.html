@@ -14,15 +14,11 @@
       <h1 id="showTitle"></h1>
       <script>
         document.getElementById("showTitle").textContent = document.title;
+        document.write("innerWidth=" + window.innerWidth + "<br>");
         document.write(
-            "innerWidth=" + 
-            window.innerWidth + "<br>");
-        document.write(
-          "clientWidth=" +
-            document.documentElement.clientWidth +
-            "<br>"
+          "clientWidth=" + document.documentElement.clientWidth + "<br>"
         );
-      </script>       
+      </script>
       <p>キャッチコピーや説明文</p>
     </header>
 
@@ -41,6 +37,7 @@
           <li class="mainmenu"><a href="study_1123">study_1123</a></li>
           <li class="mainmenu"><a href="study_1124">study_1124</a></li>
           <li class="mainmenu"><a href="study_1125">study_1125</a></li>
+          <li class="mainmenu"><a href="study_1128">study_1128</a></li>
         </ul>
       </article>
 
@@ -54,7 +51,7 @@
       </aside>
     </main>
     <iframe
-      src="disptxt.html?url=index.html"
+      src="./disptxt.html?url=index.html"
       style="width: 100%; height: 400px"
       frameborder="0"
     ></iframe>
