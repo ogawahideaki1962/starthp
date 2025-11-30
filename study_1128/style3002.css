@@ -1,0 +1,16 @@
+@charset "UTF-8";
+
+header {
+    background: 
+        url("../images_crepro/header_bg_pc.jpg") no-repeat center/cover;
+}
+
+#header {
+    width: 100%;
+}
+
+.card {
+    display: block;
+    width: 50%;
+    object-fit: cover;
+}
