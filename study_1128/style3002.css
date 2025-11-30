@@ -1,16 +1,123 @@
 @charset "UTF-8";
 
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 
+    Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    line-height: 1.875;
+    letter-spacing: 0.1em;
+}
+
+.wrap {
+    max-width: 1140px;
+    padding: 0 20px;
+    margin: 0 auto;
+}
+
 header {
-    background: 
-        url("../images_crepro/header_bg_pc.jpg") no-repeat center/cover;
+    background-image: url(../images_crepro/header_bg_pc.jpg);
+    background-size: cover;
+    padding-top: 50px;
+    padding-bottom: 105px;
 }
 
-#header {
-    width: 100%;
+.header_top {
+    display: flex;
+    align-items: center;
+    margin-bottom: 80px;
 }
 
-.card {
-    display: block;
-    width: 50%;
-    object-fit: cover;
+.logo {
+    margin-right: auto;
+}
+
+.gnav ul {
+    display: flex;
+}
+
+.gnav a{
+    color: #fff;
+    text-decoration: none;
+    list-style-type: none;
+    transition: 0.5s;
+}
+
+.gnav li {
+    margin-right: 20px;
+    list-style-type: none;
+}
+
+.gnav a:hover {
+    color: #54D171;
+}
+
+.contact_btn>a {
+    color: #393939;
+    background-color: #54D171DD;
+    padding: 0.5em 1.5em;
+}
+
+.more_btn>a {
+    background-color: #D16F3Bdd;
+    padding: 0.5em 2.4em;
+    font-size: 20px;
+    letter-spacing: 0.2em;
+    color: #fff;
+}
+
+.button>a {
+    text-decoration: none;
+    border-radius: 5px;
+    display: inline-block;
+}
+
+.button>a:hover {
+    filter: brightness(90%);
+}
+
+.more_btn {
+    text-align: center;
+}
+
+.top_title {
+    color: #fff;
+    writing-mode: vertical-rl;
+    margin-left: auto;
+    margin-bottom: 20px;
+}
+
+.pageTitle {
+    font-size: 50px;
+    letter-spacing: 0.2em;
+    line-height: 1;
+}
+
+.subTitle {
+    margin-top: 95px;
+    font-size: 20px;
+    letter-spacing: 0.2em;
+}
+
+@media (max-width:690px) {
+    .gnav {
+        position: absolute;
+        top: 150px;
+        left: 20px;
+    }
+    .gnav ul{
+        display: initial;
+    }
+    .gnav a {
+        font-size: 18px;
+    }
+    .more_btn>a {
+        font-size:18px;
+        padding: 0.5em 2em;
+    }
 }
