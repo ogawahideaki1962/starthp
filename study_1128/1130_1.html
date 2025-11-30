@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="sample text" />
+    <link rel="stylesheet" href="../assets/css/sanitize.css" />
+    <link rel="stylesheet" href="../styles.css" />
+    <link rel="stylesheet" href="./style3001.css" />
+    <title>Style学習(11/30)</title>
+  </head>
+  <body>
+    <header>
+      <h1 id="showTitle"></h1>
+      <script>
+        document.getElementById('showTitle').textContent = document.title;
+      </script>
+    </header>
+    <main>
+      <h4>
+        文字を縦書き<br />
+        writing-mode: vertical-rl;<br />
+        文字間隔を調整（１文字分のスペース）<br />
+        letter-spacing:1em;
+      </h4>
+      <div class="vertical">
+        <p id="title">和を楽しむ</p>
+        <p id="semititle">
+          心が豊かになるくらし、平成の世の中<br>
+        </p>
+      </div>
+    </main>
+  </body>
+</html>
