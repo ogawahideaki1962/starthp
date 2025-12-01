@@ -97,6 +97,7 @@ header {
     writing-mode: vertical-rl;
     margin-left: auto;
     margin-bottom: 20px;
+    /* background-color: #888; */
 }
 
 .pageTitle {
