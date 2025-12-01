@@ -7,8 +7,12 @@
 }
 
 body {
-    font-family:
-        Arial, Helvetica, sans-serif;
+    font-family: 
+    "Hiragino Mincho ProN W3",
+    "Hiragino Mincho ProN", 
+    "MS PMincho", 
+    "MS Mincho", 
+    "Noto Serif JP", serif;
     font-size: 16px;
     line-height: 1.875;
     letter-spacing: 0.1em;
@@ -175,8 +179,9 @@ h2 .strong_text {
 
 .section_text {
     color: #707070;
+    color: blue;
     padding: 20px;
-    margin-bottom: 60px;
+    /* margin-bottom: 600px; */
     min-width: 780px;
     margin-left: auto;
     margin-right: auto;
@@ -188,6 +193,7 @@ h2 .strong_text {
     grid-template-rows: 38px 30px 125px auto 38px;
     gap: 0 2.08%;
     margin-bottom: 130px;
+    margin-top: 40px;
 }
 
 .card img {
@@ -312,3 +318,4 @@ h2 .strong_text {
         left: 0px;
     }
 }
+
