@@ -5,16 +5,18 @@
     padding: 0;
     box-sizing: border-box;
 }
+
 p {
     /* display: inline; */
 }
+
 body {
-    font-family: 
-    "Hiragino Mincho ProN W3",
-    "Hiragino Mincho ProN", 
-    "MS PMincho", 
-    "MS Mincho", 
-    "Noto Serif JP", serif;
+    font-family:
+        "Hiragino Mincho ProN W3",
+        "Hiragino Mincho ProN",
+        "MS PMincho",
+        "MS Mincho",
+        "Noto Serif JP", serif;
     font-size: 16px;
     line-height: 1.875;
     letter-spacing: 0.1em;
@@ -104,12 +106,14 @@ header {
     font-size: 50px;
     letter-spacing: 0.2em;
     line-height: 1;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
 }
 
 .subTitle {
     margin-top: 95px;
     font-size: 20px;
     letter-spacing: 0.2em;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
 }
 
 @media (max-width:690px) {
@@ -132,6 +136,7 @@ header {
         padding: 0.5em 2em;
     }
 }
+
 /*********************************************/
 /*********************************************/
 /*********************************************/
@@ -230,7 +235,7 @@ h2 .strong_text {
 }
 
 .card_btn>a {
-        padding: 0.5em 1.5em;
+    padding: 0.5em 1.5em;
     color: #fff;
     background-color: #D16F3B;
 }
@@ -296,10 +301,12 @@ h2 .strong_text {
         grid-template-rows: auto 30px auto 38px;
         margin-bottom: 90px;
     }
+
     .card:nth-of-type(n) img {
         grid-row: 1;
         grid-column: 1/-1;
     }
+
     .card:nth-of-type(n)::before {
         grid-row: 1/-1;
         grid-column: 1/-1;
@@ -308,10 +315,12 @@ h2 .strong_text {
             grid-column: 2/6;
         }
     }
+
     .card_content {
         grid-row: 3;
         grid-column: 2/-3;
     }
+
     .card:nth-of-type(even) .card_content {
         grid-column: 3/-2;
     }
@@ -322,4 +331,3 @@ h2 .strong_text {
         left: 0px;
     }
 }
-
