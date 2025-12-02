@@ -20,6 +20,8 @@ body {
     font-size: 16px;
     line-height: 1.875;
     letter-spacing: 0.1em;
+    position: relative;
+    z-index: -10;
 }
 
 .wrap {
@@ -329,5 +331,148 @@ h2 .strong_text {
 @media (max-width:450px) {
     h2>span {
         left: 0px;
+    }
+}
+
+.scene {
+    background-image: linear-gradient(to bottom, #CDCFAA, #E8E9CD);
+    z-index: 2;
+    position: relative;
+}
+
+.scene h2>span {
+    color: #91B48B;
+}
+
+.sceneBox {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 0 2.08%;
+    grid-template-rows: auto auto 40px auto;
+}
+
+.sceneBox h3 {
+    font-size: 30px;
+    letter-spacing: 0.2em;
+    font-weight: normal;
+    color: #4B8141;
+    margin-bottom: 10px;
+}
+
+.sceneBox img {
+    border-radius: 5px;
+}
+
+.sceneBox p+p {
+    margin-top: 10px;
+}
+
+.sceneContent01 {
+    grid-column: 2/6;
+    grid-row: 1/3;
+    display: grid;
+}
+
+.sceneImg01 {
+    grid-column: 6/12;
+    grid-row: 1;
+    max-height: 370px;
+    width: 100%;
+    object-fit: cover;
+}
+
+.sceneContent01 img {
+    grid-row: 1;
+    margin-left: auto;
+}
+
+.sceneContent02 {
+    grid-column: 6/10;
+    grid-row: 4;
+    align-self: end;
+    /* background-color: #fff; */
+}
+
+.sceneContent02 h3 {
+    display: inline-block;
+    /* background-color: #fff; */
+}
+
+.sceneContent02 img {
+    display: inline-block;
+    position: relative;
+    top: 10px;
+    margin-left: 5px;
+}
+
+.sceneImg02 {
+    grid-column: 2/6;
+    grid-row: 4;
+    object-fit: cover;
+    min-height: 420px;
+}
+
+@media (max-width:750px) {
+    .sceneBox {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: auto 40px auto;
+    }
+
+    .sceneContent01 {
+        grid-column: 2;
+        grid-row: 1;
+    }
+
+    .sceneImg01 {
+        grid-column: 1;
+        grid-row: 1;
+    }
+
+    .sceneContent02 {
+        grid-column: 1;
+        grid-row: 3;
+    }
+
+    .sceneImg02 {
+        grid-column: 2;
+        grid-row: 3;
+        min-height: 210px;
+    }
+
+    .sceneContent01 img {
+        width: 120px;
+    }
+
+    .sceneContent01 h3 {
+        margin-top: -20px;
+    }
+}
+
+@media (max-width:500px) {
+    .sceneBox {
+        grid-template-rows: repeat(4, auto);
+    }
+
+    .sceneBox {
+        grid-column: 1/-1;
+    }
+
+    .sceneImg01 {
+        grid-row: 1;
+        margin-bottom: 20px;
+    }
+
+    .sceneContent01 {
+        grid-row: 2;
+        margin-bottom: 60px;
+    }
+
+    .sceneImg02 {
+        grid-row: 3;
+        margin-bottom: 20px;
+    }
+
+    .sceneContent02 {
+        grid-row: 4;
     }
 }
