@@ -583,3 +583,65 @@ aside a:hover {
         display: block;
     }
 }
+
+footer {
+    padding-top: 64px;
+    padding-bottom: 64px;
+    background-image: linear-gradient(to top, #CDCFAA, #E8E9CD);
+}
+
+.footerLogo {
+    width: 100px;
+}
+
+.footerName {
+    color: #4B8141;
+    font-size: 30px;
+    letter-spacing: 0.2em;
+}
+
+.footerText {
+    margin-bottom: 30px;
+}
+
+.footerText p {
+    font-size: 14px;
+}
+
+.footerNav {
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+    margin-bottom: 20px;
+}
+
+.footerNav li:not(last-child) {
+    margin-right: 20px;
+}
+
+.footerNav a {
+    text-decoration: none;
+    color: #4B8141;
+    transition: 0.5s;
+}
+
+.footerNav a:hover {
+    color: #D16F3B;
+}
+
+@media(max-width:580px) {
+    .footerLogo {
+        margin: auto;
+    }
+    .footerName {
+        text-align: center;
+    }
+    .footerText {
+        margin-top: 30px;
+    }
+    .footerNav {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
