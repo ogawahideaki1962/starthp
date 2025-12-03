@@ -143,6 +143,12 @@ header {
 /*********************************************/
 /*********************************************/
 /*********************************************/
+.japan {
+    padding-top: 50px;
+    padding-bottom: 20px;
+    /* background-color: #bbb; */
+}
+
 img {
     max-width: 100%;
     height: auto;
@@ -162,7 +168,6 @@ h2 {
     color: #232222;
     text-align: center;
     line-height: 30px;
-    /* margin-bottom: 100px; */
     margin-bottom: 2em;
     position: relative;
 }
@@ -334,10 +339,15 @@ h2 .strong_text {
     }
 }
 
+/* ******************************* */
+/* section scene *******************/
+/* ******************************* */
 .scene {
     background-image: linear-gradient(to bottom, #CDCFAA, #E8E9CD);
     z-index: 2;
     position: relative;
+    padding-top: 50px;
+    padding-bottom: 20px;
 }
 
 .scene h2>span {
@@ -478,6 +488,14 @@ h2 .strong_text {
 }
 
 /* ******************************* */
+/* ******************************* */
+/* section more *******************/
+/* ******************************* */
+
+.more {
+    padding-top: 50px;
+    padding-bottom: 20px;
+}
 
 .japan h2>span,
 .more h2>span {
@@ -527,7 +545,7 @@ h2 .strong_text {
 }
 
 .more_list>li a:hover img {
-    transform: scale(110%);
+    transform: scale(120%); /* 画像を拡大 */
 }
 
 .more_list li:first-of-type {
@@ -571,7 +589,7 @@ aside a {
 }
 
 aside a:hover {
-    opacity: 0.8; 
+    opacity: 0.8;
 }
 
 @media(max-width:580px) {
@@ -579,6 +597,7 @@ aside a:hover {
         background-position: left center;
         font-size: 20px;
     }
+
     aside span {
         display: block;
     }
@@ -633,15 +652,17 @@ footer {
     .footerLogo {
         margin: auto;
     }
+
     .footerName {
         text-align: center;
     }
+
     .footerText {
         margin-top: 30px;
     }
+
     .footerNav {
         flex-direction: column;
         text-align: center;
     }
 }
-
