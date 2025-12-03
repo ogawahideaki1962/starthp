@@ -137,6 +137,11 @@ footer {
     main {
         display: block;
     }
+
+    article {
+        display: block;
+    }
+
     aside {
         display: block;
     }
