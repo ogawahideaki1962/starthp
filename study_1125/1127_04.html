@@ -11,7 +11,7 @@
     <style>
       main {
         height: 300px;
-        background: url("https://picsum.photos/800/400") no-repeat center/cover;
+        background: url('https://picsum.photos/800/400') no-repeat center/cover;
         background-size: cover;
         background-position: center;
         background-repeat: no-repeat;
@@ -28,10 +28,7 @@
       }
 
       .dropbtn {
-        width: 25%;
-        background: rgba(155, 155, 255, 0.2);
-        background: radial-gradient(circle, rgb(228, 227, 227), blue);
-        background: conic-gradient(from 30deg, red, yellow, green);
+        max-width: 200px;
         background: linear-gradient(to bottom, rgb(228, 227, 227), green);
         color: #fff;
         padding: 10px 20px;
@@ -48,20 +45,20 @@
 
       .dropdown-content {
         display: none;
-        width: 25%;
+        max-width: 200px;
         position: absolute;
         min-width: auto;
-        background: rgba(255, 255, 255, 0.15);
+        margin-left: 6px;
+        background: rgba(255, 255, 255, 0);
         border-radius: 12px;
-        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+        box-shadow: 0 8px 24px rgba(0, 0, 0, 0);
         backdrop-filter: blur(12px);
         overflow: hidden;
       }
 
       .dropdown-content a {
         color: #fff;
-        padding: 6px 26px;
-        padding: 10px 20px;
+        padding: 6px 20px;
         text-align: center;
         border-radius: 12px;
         border: 1px solid rgba(176, 176, 177, 0.3);
@@ -76,7 +73,6 @@
       }
 
       .dropdown-content a:hover {
-        background: rgba(255, 255, 255, 0.05);
         background: linear-gradient(45deg, rgb(228, 227, 227), blue);
         background: linear-gradient(
           to bottom,
@@ -92,7 +88,7 @@
       .btm {
         background: linear-gradient(45deg, rgb(228, 227, 227), blue);
         height: 40px;
-        width: 100px;
+        width: 200px;
         border-radius: 6px;
         justify-content: center;
         text-align: center;
@@ -107,7 +103,7 @@
     <header>
       <h1 id="showTitle"></h1>
       <script>
-        document.getElementById("showTitle").textContent = document.title;
+        document.getElementById('showTitle').textContent = document.title;
       </script>
     </header>
     <main>
