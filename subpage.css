@@ -140,9 +140,11 @@ footer {
 
     article {
         display: block;
+        flex: none;
     }
 
     aside {
         display: block;
+        flex: none;
     }
 }
