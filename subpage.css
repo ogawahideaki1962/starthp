@@ -134,7 +134,7 @@ footer {
     filter: brightness(130%);
 }
 
-@media (max-width:720px) {
+@media (max-width:640px) {
     main {
         display: block;
     }
