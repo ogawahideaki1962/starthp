@@ -78,13 +78,14 @@ article {
     font-size: larger;
     font-weight: bold;
     margin-bottom: 10px;
-    text-decoration: underline;
+    /* text-decoration: underline; */
 }
 
 aside {
-    flex: 0 0 250px;
+    flex: 0 0 320px;
     background-color: #f4f4f4;
     padding: 1em;
+    padding-left: auto;
     margin-left: 1em;
 }
 
@@ -94,3 +95,11 @@ footer {
     text-align: center;
     padding: 1em;
 }
+
+ul, ol, li, a {
+    text-decoration: none;
+}
+a:link, a:visited {
+    color: blue;
+}
+
