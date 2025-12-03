@@ -59,6 +59,7 @@ main {
 }
 
 article {
+    width:320px;
     flex: 2;
     padding: 1em;
     font-size: 18px;
