@@ -121,3 +121,9 @@ footer {
 .sideMenuItem:hover {
     filter: brightness(130%);
 }
+
+@media (max-width:620px) {
+main {
+    display: block;
+}
+}
