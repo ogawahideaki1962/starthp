@@ -276,7 +276,7 @@ h2 .strong_text {
     margin-right: 14.79%;
 }
 
-.card:nth-of-type(odd) {
+.card:nth-of-type(even) {
     margin-left: 14.79%;
 }
 
@@ -393,25 +393,30 @@ h2 .strong_text {
 
 .sceneContent01 img {
     grid-row: 1;
+    width: 100px;
     margin-left: auto;
 }
-
+.sceneContent01 h3 {
+    grid-row: 2;
+}
+.sceneContent01 div {
+    grid-row: 3;
+}
 .sceneContent02 {
     grid-column: 6/10;
     grid-row: 4;
     align-self: end;
-    /* background-color: #fff; */
 }
 
 .sceneContent02 h3 {
     display: inline-block;
-    /* background-color: #fff; */
 }
-
 .sceneContent02 img {
+    width: 80px;
     display: inline-block;
     position: relative;
-    top: 10px;
+
+    top: -1em;
     margin-left: 5px;
 }
 
