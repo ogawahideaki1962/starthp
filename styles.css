@@ -89,6 +89,16 @@ aside {
     margin-left: 1em;
 }
 
+.sideMenu {
+    padding: 0;
+    /* background-col
+    or: #888; */
+}
+.sideMenu li {
+    margin-left: 0;
+    list-style-type: none;
+}
+
 footer {
     background-color: #333;
     color: white;
