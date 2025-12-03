@@ -4,7 +4,8 @@ html {
     font-size: 100%;
 }
 
-ul,li {
+ul,
+li {
     /* margin: 0; */
     padding: 0;
 }
@@ -31,8 +32,8 @@ header {
     justify-content: space-between;
     padding: 20px 20px 20px 20px;
     text-shadow: 3px 3px 6px rgba(255, 253, 253, 0.5);
-        /* 横2px, 縦2px, ぼかし5px, 半透明黒 */
-    }
+    /* 横2px, 縦2px, ぼかし5px, 半透明黒 */
+}
 
 nav {
     background-color: #333;
@@ -70,15 +71,19 @@ article {
     /* justify-content: center; */
     height: 34px;
 }
+
 .mainList a:link {
     color: blue;
 }
+
 .mainList a:visited {
     color: blue;
 }
+
 .mainList a:hover {
     font-size: 24px;
 }
+
 aside {
     flex: 1;
     background-color: #f4f4f4;
@@ -103,6 +108,7 @@ footer {
 .sideMenu {
     /* background-color: rgb(79, 113, 101); */
 }
+
 .sideMenuItem {
     display: block;
     text-align: center;
@@ -114,16 +120,24 @@ footer {
     /* line-height: 4em; */
     background-color: rgb(39, 11, 123);
 }
-.sideMenuItem:link {color:white}
+
+.sideMenuItem:link {
+    color: white
+}
+
 .sideMenuItem:visited {
     color: white;
 }
+
 .sideMenuItem:hover {
     filter: brightness(130%);
 }
 
 @media (max-width:620px) {
-main {
-    display: block;
-}
+    main {
+        display: block;
+    }
+    aside {
+        display: block;
+    }
 }
