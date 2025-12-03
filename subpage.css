@@ -101,6 +101,7 @@ footer {
 
 .sideMenu li {
     list-style-type: none;
+    text-align: center;
     /* background-color: #888; */
 }
 

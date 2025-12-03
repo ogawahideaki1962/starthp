@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="sample text" />
+    <link rel="stylesheet" href="../assets/css/sanitize.css" />
+    <link href="styles.css" rel="../styles.css" type="text/css" />
+    <title>text_align 他</title>
+    <style>
+      .textBox {
+        background-color: #999;
+        padding: 10px;
+      }
+      .text1 {
+        text-align: default;
+        background-color: aqua;
+      }
+      .text2 {
+        text-align: center;
+        background-color: aqua;
+      }
+      .text3 {
+        text-align: end;
+        background-color: aqua;
+      }
+      .textBox2 {
+        display: flex;
+        justify-content: space-between;
+        background-color: #ccc;
+      }
+      .textBox2 > p {
+        width: 25%;
+        height: 6em;
+        background-color: rgb(166, 166, 255);
+      }
+      .text4 {
+        line-height: 1em;
+      }
+      .text5 {
+        line-height: 6em;
+        text-align: center;
+      }
+      .text6 {
+        text-align: end;
+        line-height: 11em;
+      }
+      .outBox {
+        /* display: flex; */
+        width: 100%;
+        height: 200px;
+        padding: 5px;
+        background-color: #333;
+        position: absolute;
+      }
+      .inBox {
+        /* flex: 1; */
+        width: 150px;
+        height: 150px;
+        position: absolute;
+        left: 100px;
+        height: 50%;
+        /* margin: 15px; */
+        background-color: #ddd;
+      }
+      #Box1 {
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        z-index: 2;
+        background-color: #fff;
+      }
+      .inBox img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+      #Box2 {
+        position: absolute;
+        top: 20px;
+        left: 60px;
+        z-index: 1;
+        background-color: #ddd;
+      }
+      #Box3 {
+        position: absolute;
+        top: 40px;
+        left:120px;
+        background-color: #888;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1 id="showTitle"></h1>
+      <script>
+        document.getElementById('showTitle').textContent = document.title;
+      </script>
+    </header>
+    <main>
+      <h4>text-alignで文字列の横位置を調整</h4>
+      <div class="textBox">
+        <p class="text1">text-align: default;</p>
+        <p class="text2">text-align: center;</p>
+        <p class="text3">text-align: end;</p>
+      </div>
+      <h4>line-heightで文字列の縦位置を調整</h4>
+      <div class="textBox2">
+        <p class="text4">text4</p>
+        <p class="text5">text5</p>
+        <p class="text6">text6</p>
+      </div>
+      <div class="outBox">
+        <div class="inBox" id="Box1">
+          <img src="../images_crepro/more2.jpg" alt="" />
+        </div>
+        <div class="inBox" id="Box2">
+          <img src="../images_crepro/more4.jpg" alt="" />
+        </div>
+        <div class="inBox" id="Box3">
+          <img src="../images_crepro/more6.jpg" alt="" />
+        </div>
+      </div>
+    </main>
+  </body>
+  <iframe
+    src="../disptxt.html?url=./study_1125/1127_04.html"
+    style="width: 100%; height: 400px"
+    frameborder="0"
+  ></iframe>
+</html>
