@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="sample text" />
+    <link rel="stylesheet" href="../assets/css/sanitize.css" />
+    <link href="styles.css" rel="../subpage.css" type="text/css" />
+    <title>display: flex</title>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+      }
+
+      #flexbox {
+        display: flex;
+        flex-direction: row-reverse;
+        /* flex-direction: column-reverse; */
+        flex-wrap: wrap;
+        /* justify-content: flex-start; */
+        /* justify-content: flex-end; */
+        /* justify-content: center; */
+        /* justify-content: space-between; */
+        justify-content: space-around;
+        background: #ddd;
+        width: 100%;
+        height: auto;
+        padding: 10px;
+      }
+      .box-item {
+        width: 30%;
+        background: orange;
+        text-align: center;
+        padding: 15px 40px;
+        border: 5px solid #ddd;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1 id="showTitle"></h1>
+      <script>
+        document.getElementById('showTitle').textContent = document.title;
+      </script>
+      <a href="https://webst8.com/code/css-flex/"
+        >【CSS display:flex】フレックスボックスの使い方</a
+      >
+    </header>
+    <main>
+      <div id="flexbox">
+        <div class="box-item">1</div>
+        <div class="box-item">2</div>
+        <div class="box-item">3</div>
+        <div class="box-item">4</div>
+        <div class="box-item">5</div>
+      </div>
+    </main>
+    <footer>
+      <iframe
+        src="../disptxt.html?url=./study_1203/1203_03.html"
+        style="width: 100%; height: 600px"
+        frameborder="0"
+      ></iframe>
+    </footer>
+  </body>
+</html>
