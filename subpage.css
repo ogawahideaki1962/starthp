@@ -59,17 +59,14 @@ main {
 }
 
 article {
-    width:320px;
-    flex: 2;
-    padding: 1em;
+    flex: 1 1 auto;
+        padding: 1em;
     font-size: 18px;
 }
 
 .mainList a {
     text-decoration: none;
     display: inline-block;
-    /* align-items: center; */
-    /* justify-content: center; */
     height: 34px;
 }
 
@@ -86,11 +83,8 @@ article {
 }
 
 aside {
-    flex: 1;
+    flex: 0 0 320px;
     background-color: #f4f4f4;
-    /* padding: 1em; */
-
-    /* margin-left: 1em; */
 }
 
 footer {
@@ -120,6 +114,7 @@ footer {
     margin: 1em;
     /* line-height: 4em; */
     background-color: rgb(39, 11, 123);
+    transition: 0.5s;
 }
 
 .sideMenuItem:link {
