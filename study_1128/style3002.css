@@ -468,7 +468,7 @@ h2 .strong_text {
         grid-template-rows: repeat(4, auto);
     }
 
-    .sceneBox {
+    .sceneBox>* {
         grid-column: 1/-1;
     }
 
